@@ -12,8 +12,9 @@
 
 body {
    margin: 0px;
-   min-height: 100%;
+   
    width: 100%;
+   height: 100%;
    background-image: url(fondo_petro.png);
 }
 	    .parent {
@@ -22,7 +23,7 @@ body {
   			 left: 0;
 		}
 		.image1 {
-			position: relative;
+			position: absolute;
 			top: 0;
 			left: 0;
 		}
@@ -34,11 +35,11 @@ body {
 		}
 		.image3 {
 			position: absolute;
-			width: 50%;
-			height: 90px;
+			width: 30%;
+			height: 50px;
 			top: 50px;
-			margin-top: 0%;
-			margin-left: 25%;
+			
+			margin-left: 35%;
 			
 		}
 		.image4{
@@ -47,44 +48,34 @@ body {
 			right: 30px;
 			top: 20px;
 		}
-		.image5{
-			position: absolute;
-			height: 580px;
-			width: 300px;
-			top: 200px;
-		}
-		.image6{
-			position: absolute;
-			top: 0;
-			left: 400px;
-			width: 900px;
-			height: 600px;
-		}
-		.image7{
-			position: absolute;
-			height: 580px;
-			width: 300px;
-			top: 200px;
-			right: 0;
-		}
 		.button{
 			background: transparent;
-			width: 300px;
+			width: 20%;
 			height: 50px;
 		}
 	</style>
 </head>
 <body>
-<div class="parent" >
-	<img class = "image1" src="brown.png" width="100%" height="200">
-	<img class = "image2" src="logo_menu.png">
-	<img class = "image3" src="rupestrarium.png">
-	<img class = "image4" src = "correo5.png">
-	<img class = "image5" src="fondo_intro.jpg" >
-	<img class = "image7" src="fondo_intro.jpg" >
+<div class="parent" style="height: 100%;">
+	<!--img class = "image1" src="brown.png" width="100%" height="200"-->
+	
+	<img src="brown.png" style="position: absolute; width: 100%;height: 200px;">
+	
+	
+	<div style="position: absolute;top: 200px;left: 40px;width: 20%;bottom: 0px;"><img style="height: 100%;width: 100%;" src="fondo_intro.jpg" ></div>
+	<div style="position: absolute;top: 200px;right: 40px;width: 20%;bottom: 0px;"><img style="height: 100%;width: 100%;" src="fondo_intro.jpg" ></div>
+	<img src="topbar.png" style="position: absolute;width: 100%;height: 160px;top: 40px;">
+	<img src="LogoANAR.png" style="position: absolute;top: 50px;width: 14%;right: 43%;height: 100px;">
+	<img style="position: absolute;height: 40px;width: 100%; top: 160px" src="red.png" >
+	<div style="position: absolute;top: 160px;right: 0px;width: 40px;bottom: 0px;"><img style="height: 100%;width: 100%;" src="red.png" ></div>
+	<div style="position: absolute;top: 160px;left: 0px;width: 40px;bottom: 0px;"><img style="height: 100%;width: 100%;" src="red.png" ></div>
+	
+	<!--img src="presentacion_ico.png" style="position: absolute;left: 30px;top: 205px;height: 40px">
 	<img style="position: absolute;top: 40px;right: 60px;height: 30px" src="spain.png">
 	<img style="position: absolute;top: 40px;right: 20px;height: 30px" src="uk.png">
-	<img src="presentacion_ico.png" style="position: absolute;left: 30px;top: 205px;height: 40px">
+	<img class = "image3" src="rupestrarium.png">
+	<img class = "image4" src = "correo5.png">
+	<img class = "image2" src="logo_menu.png">
 	<img src="logo_intro_nuevo.png" style="position: absolute;left: 30px;top: 255px;height: 40px">
 	<img src="introduccion_ico.png" style="position: absolute;left: 30px;top: 305px;height: 40px">
 	<img src="recapitula.png" style="position: absolute;left: 28px;top: 358px;height: 30px">
@@ -92,33 +83,49 @@ body {
 	<img src="petroglifo_ico.png" style="position: absolute;right: 230px;top: 255px;height: 40px">
 	<img src="pintura_ico.png" style="position: absolute;right: 230px;top: 305px;height: 40px">
 	<img src="pintura_ico.png" style="position: absolute;right: 230px;top: 355px;height: 40px">
-	<img src="recapitula_ico.png" style="position: absolute;right: 230px;top: 405px;height: 40px">
-	<img style="position: absolute;height: 40px;width: 100%; top: 160px" src="red.png" >
-	<button class="button" style="position: absolute;top: 200px;" onclick="loadImage(1)"><b>Presentacion</b></button>
-	<button class="button" style="position: absolute;top: 250px;" onclick="loadImage(2)"><b>Introduccion</b></button>
-	<button class="button" style="position: absolute;top: 300px;" onclick="loadImage(3)"><b>Instrucciones</b></button>
-	<button class="button" style="position: absolute;top: 350px;" onclick="loadImage(4)"><b>Creditos</b></button>
-	<button class="button" style="position: absolute;top: 200px;right: 0px;width: 300px" onclick="loadPetro1()"><b>Petroglifos</b></button>
-	<button class="button" style="position: absolute;top: 250px;right: 0px;"><b>Petroglifos 2</b></button>
-	<button class="button" style="position: absolute;top: 300px;right: 0px;width: 300px"><b>Pinturas Rupestres</b></button>
-	<button class="button" style="position: absolute;top: 350px;right: 0px;"><b>Pinturas Rupestres 2</b></button>
-	<button class="button" style="position: absolute;top: 400px;right: 0px;" onclick="loadRec()"><b>Recapitula</b>
+	<img src="recapitula_ico.png" style="position: absolute;right: 230px;top: 405px;height: 40px"-->
+	<img src="button_gray.png" style="position: absolute; width: 20%;top: 200px;right: 40px;height: 50px;">
+	<img src="button_gray.png" style="position: absolute; width: 20%;top: 250px;right: 40px;height: 50px;">
+	<img src="button_orange.png" style="position: absolute; width: 20%;top: 300px;right: 40px;height: 50px;">
+	<img src="button_orange.png" style="position: absolute; width: 20%;top: 350px;right: 40px;height: 50px;">
+	<img src="button_red.png" style="position: absolute; width: 20%;top: 400px;right: 40px;height: 50px;">
+	<img src="button_darkred.png" style="position: absolute; width: 20%;top: 200px;left: 40px;height: 50px;">
+	<img src="button_darkred.png" style="position: absolute; width: 20%;top: 250px;left: 40px;height: 50px;">
+	<img src="button_darkred.png" style="position: absolute; width: 20%;top: 300px;left: 40px;height: 50px;">
+	<img src="button_darkred.png" style="position: absolute; width: 20%;top: 350px;left: 40px;height: 50px;">
+	<img src="button_darkred.png" style="position: absolute; width: 20%;top: 400px;left: 40px;height: 50px;">
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 200px;left: 40px;" onclick="loadImage(1)"><b style="color: white;font-weight: lighter;">Presentacion</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 250px;left: 40px;" onclick="loadImage(2)"><b style="color: white;font-weight: lighter;">Introduccion</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 300px;left: 40px" onclick="loadImage(3)"><b style="color: white;font-weight: lighter;">Instrucciones</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 350px;left: 40px;" onclick="loadImage(4)"><b style="color: white;font-weight: lighter;">Creditos</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 400px;left: 40px;" onclick="loadImage(5)"><b style="color: white;font-weight: lighter;">Contacto</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 200px;right: 40px;" onclick="loadPetro1()"><b style="color: white;font-weight: lighter;">Petroglifos</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 250px;right: 40px;" onclick="loadConst()"><b style="color: white;font-weight: lighter;">Petroglifos 2</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 300px;right: 40px;" onclick="loadConst()"><b style="color: white;font-weight: lighter;">Pinturas Rupestres</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 350px;right: 40px;" onclick="loadConst()"><b style="color: white;font-weight: lighter;">Pinturas Rupestres 2</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 400px;right: 40px;" onclick="loadRec()"><b style="color: white;font-weight: lighter;">Recapitulemos</b>
 	</button>
-	<div id="images">
+	
+	
+	<object pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" type="application/x-shockwave-flash" play = "true" style="position: absolute;width: 50%; height: 120px;left: 7%;top: 40px" data="grabado-izquierdo2.swf"></object>
+	<object pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" type="application/x-shockwave-flash" play = "true" style="position: absolute;width: 50%; height: 120px;right: 7%;top: 40px" data="grabado-derecho2.swf"></object>
+	<div id="images" >
     <div id="hands"></div>
 	<div id="head" ></div>
 	<div id="body" ></div>
 	<div id="bot" ></div>
-	<div id="img"><img id="image_X" style="position: absolute; right: 37%;top: 200px; width: 26%;" src="presentacion.png" ></div>
+	<div id="img"><div style="position: absolute; right: 37%;top: 200px; width: 26%;bottom: 7vh;"><img id="image_X" style="height: 100%;width: 100%;" src="portada.jpg" ></div></div>
 
 	</div>
-	<div id="rec" ></div>
+	<img src="black.png" style="position: absolute;bottom: 0px; width: 100%; height: 7vh;">
+<img src="footer.png" style="position: absolute;bottom: 0px; width: 70%;left: 15%; height: 7vh;">
+
 
 	
 	
 	
 </div>
-
+	<div id="rec" ></div>
 <script>
     var p1head = 3;
     var p1cuerpo = 3;
@@ -132,10 +139,10 @@ body {
 		document.getElementById("bot").innerHTML = "";
 		document.getElementById("img").innerHTML = "";
     	document.getElementById("rec").innerHTML = 
-    	`<img style=" top: 240px;display: block;margin-left: auto;margin-right: auto" src="cuadro2.png">
-    	<img onclick="nextPreg()" style="position:absolute; top:540px; right: 500px;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
+    	`<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
     	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:26px;width:15em;">
+    	    <p style="font-size:2vw;width:15em;">
     		<b>Las Manifestaciones Rupestres son <br>importantes porque:_____________</b><br>
   			<input type="radio" name="p1" value="a" checked>Son obras artisticas<br>
  			<input type="radio" name="p1" value="b">Es posible trasladarlas de un sitio a otro <br>
@@ -149,10 +156,11 @@ body {
 
     function nextPreg(){
     	if(pregunta == 1){
-    		document.getElementById("rec").innerHTML = `<img style=" top: 240px;display: block;margin-left: auto;margin-right: auto" src="cuadro2.png">
-    	<img onclick="nextPreg()" style="position:absolute; top:540px; right: 500px;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
+    		document.getElementById("rec").innerHTML =
+    	 `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
     	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:26px;width:15em;">
+    	    <p style="font-size:2vw;width:15em;">
     		<b>Las Manifestaciones Rupestres son importantes porque:_____________</b><br>
   			<input type="radio" name="p1" value="a" checked>Son obras artisticas<br>
  			<input type="radio" name="p1" value="b">Es posible trasladarlas de un sitio a otro <br>
@@ -162,10 +170,10 @@ body {
 		</form>`;
 		pregunta = 2;
 		}else if(pregunta == 2 ){
-			document.getElementById("rec").innerHTML = `<img style=" top: 240px;display: block;margin-left: auto;margin-right: auto" src="cuadro2.png">
-    	<img onclick="nextPreg()" style="position:absolute; top:540px; right: 500px;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
     	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:26px;width:15em;">
+    	    <p style="font-size:2vw;width:15em;">
     		<b>El ____________ permite acercarnos a las <br>diversas expresiones graficas, con los distintos contenidos de nuestras primeras sociedades</b><br>
   			<input type="radio" name="p1" value="a" checked>Dolmen<br>
  			<input type="radio" name="p1" value="b">Agua <br>
@@ -175,10 +183,10 @@ body {
 		</form>`;
 		pregunta = 3;
 		}else if(pregunta==3){
-			document.getElementById("rec").innerHTML = `<img style=" top: 240px;display: block;margin-left: auto;margin-right: auto" src="cuadro2.png">
-    	<img onclick="nextPreg()" style="position:absolute; top:540px; right: 500px;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
     	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:26px;width:15em;">
+    	    <p style="font-size:2vw;width:15em;">
     		<b>¿En cuales de estas manifestaciones encontramos graficos o dibujos, pintados o grabados?</b><br>
   			<input type="radio" name="p1" value="a" checked>Cerros Miticos Naturales<br>
  			<input type="radio" name="p1" value="b">Pinturas Rupestres, Pictografias o <br>Micropetroglifos <br>
@@ -189,10 +197,10 @@ body {
 		pregunta = 4;
 
 		}else if(pregunta==4){
-			document.getElementById("rec").innerHTML = `<img style=" top: 240px;display: block;margin-left: auto;margin-right: auto" src="cuadro2.png">
-    	<img onclick="nextPreg()" style="position:absolute; top:540px; right: 500px;height:50px;" src="fin.png">
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
     	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:26px;width:15em;">
+    	    <p style="font-size:2vw;width:15em;">
     		<b>Se llaman ____________ las representaciones del Ser humano-cuerpo entero, la cabeza, huellas de manos y pies....</b><br>
   			<input type="radio" name="p1" value="a" checked>Figuras Geometricas<br>
  			<input type="radio" name="p1" value="b">Figuras Zoomorfas<br>
@@ -202,10 +210,10 @@ body {
 		</form>`;
 		pregunta = 5;
 		}else if (pregunta==5) {
-			document.getElementById("rec").innerHTML = `<img style=" top: 240px;display: block;margin-left: auto;margin-right: auto" src="cuadro2.png">
-    	<img onclick="nextPreg()" style="position:absolute; top:540px; right: 500px;height:50px;" src="fin.png">
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
     	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:26px;width:15em;">
+    	    <p style="font-size:2vw;width:15em;">
     		<b>Las representaciones de imagenes mas abstractas las llamamos ____________</b><br>
   			<input type="radio" name="p1" value="a" checked>Zoomorfas<br>
  			<input type="radio" name="p1" value="b">Antropomorfas<br>
@@ -215,10 +223,10 @@ body {
 		</form>`;
 		pregunta = 6;
 		}else if (pregunta==6) {
-			document.getElementById("rec").innerHTML = `<img style=" top: 240px;display: block;margin-left: auto;margin-right: auto" src="cuadro2.png">
-    	<img onclick="nextPreg()" style="position:absolute; top:540px; right: 500px;height:50px;" src="fin.png">
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
     	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:26px;width:15em;">
+    	    <p style="font-size:2vw;width:15em;">
     		<b>Las figuras Zoomorfas son representaciones de:</b><br>
   			<input type="radio" name="p1" value="a" checked>Plantas<br>
  			<input type="radio" name="p1" value="b">Animales<br>
@@ -228,10 +236,10 @@ body {
 		</form>`;
 		pregunta = 7;
 		}else{
-			document.getElementById("rec").innerHTML = `<img style=" top: 240px;display: block;margin-left: auto;margin-right: auto" src="cuadro2.png">
-    	<img onclick="nextPreg()" style="position:absolute; top:540px; right: 500px;height:50px;" src="fin.png">
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="nextPreg()" style="position:absolute; height:7vh;bottom:12vh; right: 25vw;" src="fin.png">
     	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:26px;width:15em;">
+    	    <p style="font-size:2vw;width:15em;">
     		<b>La mezcla de figuras Antropomorfas + Zoomorfas genera representaciones _________________</b><br>
   			<input type="radio" name="p1" value="a" checked>Geantropomorfas<br>
  			<input type="radio" name="p1" value="b">Antropozoomorfas<br>
@@ -250,13 +258,15 @@ body {
 		document.getElementById("rec").innerHTML = "";
 		var mes;
 		if (num == 1) {
-			mes = '<img id="image_X" style="position: absolute; right: 37%;top: 200px; width: 26%" src="presentacion.png" >'
+			mes = '<div style="position: absolute;top: 200px;right:37%;width: 26%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="presentacion.png" ></div>'
 		}else if (num == 2) {
-			mes = '<img id="image_X" style="position: absolute; right: 37%;top: 200px; width: 26%;" src="intro.png" >'
+			mes = '<div style="position: absolute;top: 200px;right:37%;width: 26%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="intro.png" ></div>'
 		}else if(num == 3){
-			mes = '<img id="image_X" style="position: absolute; right: 37%;top: 200px; width: 26%;" src="instruc.png" >'
+			mes = '<div style="position: absolute;top: 200px;right:37%;width: 26%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="instruc.png" ></div>'
+		}else if (num == 4) {
+			mes = '<div style="position: absolute;top: 200px;right:37%;width: 26%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="cred_es.png" ></div>'
 		}else{
-			mes = '<img id="image_X" style="position: absolute; right: 37%;top: 200px; width: 26%;" src="cred_es.png" >'
+			mes = '<div style="position: absolute;top: 200px;right:37%;width: 26%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="contacto.png" ></div>'
 		}
 		document.getElementById("img").innerHTML = mes;
 		/*var mes;
@@ -267,7 +277,14 @@ body {
 		var mes = '<img style="position: absolute;height: 180px; right: 500px;top: 200px" src="presentacion.png" >';
 		document.getElementById("content").innerHTML = mes;
 	}*/
-	
+	function loadConst(){
+		document.getElementById("hands").innerHTML = "";
+		document.getElementById("head").innerHTML = "";
+		document.getElementById("body").innerHTML = "";
+		document.getElementById("bot").innerHTML = "";
+		document.getElementById("rec").innerHTML = "";
+		document.getElementById("img").innerHTML = '<p style="position:absolute; top: 220px;left: 34%; color: white;font-size:4vw;">En construccion.....</p>';
+	}
 	function loadPetro1(){
 		loadHands1();
         document.getElementById("img").innerHTML = "";
@@ -284,25 +301,24 @@ body {
 	}
 	function loadHands1(){
 		var mes = `
-		<img onclick="loadPetro1head()" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" style="position: absolute;height: 50px; right: 25%;top: 260px" src="derecha.png" >
-	<img onclick="loadPetro1head2()" onmouseover="this.src='izqblue.png'" onmouseout="this.src='izquierda.png'" style="position: absolute;height: 50px; left: 25%;top: 260px" src="izquierda.png" >
-	<img onclick="loadPetro1cuerpo()" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" style="position: absolute;height: 50px; right: 25%;top: 440px" src="derecha.png" >
-	<img onclick="loadPetro1cuerpo2()" onmouseover="this.src='izqblue.png'" onmouseout="this.src='izquierda.png'" style="position: absolute;height: 50px; left: 25%;top: 440px" src="izquierda.png" >
-	<img onclick="loadPetro1inferior()" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" style="position: absolute;height: 50px; right: 25%;top: 620px" src="derecha.png" >
-	<img onclick="loadPetro1inferior2()" onmouseover="this.src='izqblue.png'" onmouseout="this.src='izquierda.png'" style="position: absolute;height: 50px; left: 25%;top: 620px" src="izquierda.png" >`;
+		<img onclick="loadPetro1head()" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 4vw);" src="derecha.png" >
+	<img onclick="loadPetro1head2()" onmouseover="this.src='izqblue.png'" onmouseout="this.src='izquierda.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 4vw);" src="izquierda.png" >
+	<img onclick="loadPetro1cuerpo()" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 13vw);" src="derecha.png" >
+	<img onclick="loadPetro1cuerpo2()" onmouseover="this.src='izqblue.png'" onmouseout="this.src='izquierda.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 13vw);" src="izquierda.png" >
+	<img onclick="loadPetro1inferior()" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 21vw);" src="derecha.png" >
+	<img onclick="loadPetro1inferior2()" onmouseover="this.src='izqblue.png'" onmouseout="this.src='izquierda.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 21vw);" src="izquierda.png" >`;
 		document.getElementById("hands").innerHTML = mes;
 	}
 	function loadPetro1head(){
 		var mes;
-		console.log("hey");
 		if (p1head==1) {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 200px" src="cabeza_geo_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_geo_petro.png" >'
 			p1head = 2;
 		}else if (p1head==2) {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 200px" src="cabeza_animal_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_animal_petro.png" >'
 			p1head =3;
 		}else {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 200px" src="cabeza_antro_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_antro_petro.png" >'
 			p1head = 1;
 		}
 		document.getElementById("head").innerHTML = mes;
@@ -311,13 +327,13 @@ body {
 	function loadPetro1head2(){
 		var mes;
 		if (p1head==3) {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 200px" src="cabeza_geo_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_geo_petro.png" >'
 			p1head = 2;
 		}else if (p1head==1) {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 200px" src="cabeza_animal_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_animal_petro.png" >'
 			p1head =3;
 		}else {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 200px" src="cabeza_antro_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_antro_petro.png" >'
 			p1head = 1;
 		}
 		document.getElementById("head").innerHTML = mes;
@@ -326,13 +342,13 @@ body {
 	function loadPetro1cuerpo(){
 		var mes;
 		if (p1cuerpo==1) {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 380px" src="cuerpo_geo_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_geo_petro.png" >'
 			p1cuerpo = 2;
 		}else if (p1cuerpo==2) {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 380px" src="cuerpo_animal_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_animal_petro.png" >'
 			p1cuerpo =3;
 		}else {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 380px" src="cuerpo_antro_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_antro_petro.png" >'
 			p1cuerpo = 1;
 		}
 		document.getElementById("body").innerHTML = mes;
@@ -341,13 +357,13 @@ body {
 	function loadPetro1cuerpo2(){
 		var mes;
 		if (p1cuerpo==3) {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 380px" src="cuerpo_geo_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_geo_petro.png" >'
 			p1cuerpo = 2;
 		}else if (p1cuerpo==1) {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 380px" src="cuerpo_animal_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_animal_petro.png" >'
 			p1cuerpo =3;
 		}else {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 380px" src="cuerpo_antro_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_antro_petro.png" >'
 			p1cuerpo = 1;
 		}
 		document.getElementById("body").innerHTML = mes;
@@ -356,13 +372,13 @@ body {
 	function loadPetro1inferior(){
 		var mes;
 		if (p1inf==1) {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 560px" src="inferior_geo_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_geo_petro.png" >'
 			p1inf = 2;
 		}else if (p1inf==2) {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 560px" src="inferior_animal_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_animal_petro.png" >'
 			p1inf =3;
 		}else {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 560px" src="inferior_antro_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_antro_petro.png" >'
 			p1inf = 1;
 		}
 		document.getElementById("bot").innerHTML = mes;
@@ -371,13 +387,13 @@ body {
 	function loadPetro1inferior2(){
 		var mes;
 		if (p1inf==3) {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 560px" src="inferior_geo_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_geo_petro.png" >'
 			p1inf = 2;
 		}else if (p1inf==1) {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 560px" src="inferior_animal_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_animal_petro.png" >'
 			p1inf =3;
 		}else {
-			mes = '<img style="position: absolute;width:36%; right: 32%;top: 560px" src="inferior_antro_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_antro_petro.png" >'
 			p1inf = 1;
 		}
 		document.getElementById("bot").innerHTML = mes;
