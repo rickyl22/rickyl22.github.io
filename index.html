@@ -100,9 +100,9 @@ body {
 	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 350px;left: 40px;" onclick="loadImage(4)"><b style="color: white;font-weight: lighter;">Creditos</b></button>
 	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 400px;left: 40px;" onclick="loadImage(5)"><b style="color: white;font-weight: lighter;">Contacto</b></button>
 	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 200px;right: 40px;" onclick="loadPetro1()"><b style="color: white;font-weight: lighter;">Petroglifos</b></button>
-	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 250px;right: 40px;" onclick="loadConst()"><b style="color: white;font-weight: lighter;">Petroglifos 2</b></button>
-	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 300px;right: 40px;" onclick="loadConst()"><b style="color: white;font-weight: lighter;">Pinturas Rupestres</b></button>
-	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 350px;right: 40px;" onclick="loadConst()"><b style="color: white;font-weight: lighter;">Pinturas Rupestres 2</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 250px;right: 40px;" onclick="loadPetro2()"><b style="color: white;font-weight: lighter;">Petroglifos 2</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 300px;right: 40px;" onclick="loadPint1()"><b style="color: white;font-weight: lighter;">Pinturas Rupestres</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 350px;right: 40px;" onclick="loadPint2()"><b style="color: white;font-weight: lighter;">Pinturas Rupestres 2</b></button>
 	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 400px;right: 40px;" onclick="loadRec()"><b style="color: white;font-weight: lighter;">Recapitulemos</b>
 	</button>
 	
@@ -117,6 +117,7 @@ body {
 	<div id="img"><div style="position: absolute; right: 37%;top: 200px; width: 26%;bottom: 7vh;"><img id="image_X" style="height: 100%;width: 100%;" src="portada.jpg" ></div></div>
 
 	</div>
+
 	<img src="black.png" style="position: absolute;bottom: 0px; width: 100%; height: 7vh;">
 <img src="footer.png" style="position: absolute;bottom: 0px; width: 70%;left: 15%; height: 7vh;">
 
@@ -295,18 +296,66 @@ body {
 	}
 	function loadPetro2(){
 		loadHands2();
+        document.getElementById("img").innerHTML = "";
+        document.getElementById("rec").innerHTML = "";
 		loadPetro2head();
 		loadPetro2cuerpo();
 		loadPetro2inferior();
 	}
+	function loadPint1(){
+		loadHands3();
+        document.getElementById("img").innerHTML = "";
+        document.getElementById("rec").innerHTML = "";
+		loadPint1head();
+		loadPint1cuerpo();
+		loadPint1inferior();
+	}
+	function loadPint2(){
+		loadHands4();
+        document.getElementById("img").innerHTML = "";
+        document.getElementById("rec").innerHTML = "";
+		loadPint2head();
+		loadPint2cuerpo();
+		loadPint2inferior();
+	}
 	function loadHands1(){
 		var mes = `
-		<img onclick="loadPetro1head()" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 4vw);" src="derecha.png" >
-	<img onclick="loadPetro1head2()" onmouseover="this.src='izqblue.png'" onmouseout="this.src='izquierda.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 4vw);" src="izquierda.png" >
-	<img onclick="loadPetro1cuerpo()" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 13vw);" src="derecha.png" >
-	<img onclick="loadPetro1cuerpo2()" onmouseover="this.src='izqblue.png'" onmouseout="this.src='izquierda.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 13vw);" src="izquierda.png" >
-	<img onclick="loadPetro1inferior()" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 21vw);" src="derecha.png" >
-	<img onclick="loadPetro1inferior2()" onmouseover="this.src='izqblue.png'" onmouseout="this.src='izquierda.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 21vw);" src="izquierda.png" >`;
+		<img onclick="loadPetro1head()" onmouseover="this.src='arrow_right_blur.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 60px; right: 27%;top: calc(200px + 4vw);" src="arrow_right.png" >
+	<img onclick="loadPetro1head2()" onmouseover="this.src='arrow_left_blur.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 4vw);" src="arrow_left.png" >
+	<img onclick="loadPetro1cuerpo()" onmouseover="this.src='arrow_right_blur.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 13vw);" src="arrow_right.png" >
+	<img onclick="loadPetro1cuerpo2()" onmouseover="this.src='arrow_left_blur.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 13vw);" src="arrow_left.png" >
+	<img onclick="loadPetro1inferior()" onmouseover="this.src='arrow_right_blur.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 21vw);" src="arrow_right.png" >
+	<img onclick="loadPetro1inferior2()" onmouseover="this.src='arrow_left_blur.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 21vw);" src="arrow_left.png" >`;
+		document.getElementById("hands").innerHTML = mes;
+	}
+	function loadHands2(){
+		var mes = `
+		<img onclick="loadPetro2head()" onmouseover="this.src='arrow_right_blur.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 60px; right: 27%;top: calc(200px + 4vw);" src="arrow_right.png" >
+	<img onclick="loadPetro2head2()" onmouseover="this.src='arrow_left_blur.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 4vw);" src="arrow_left.png" >
+	<img onclick="loadPetro2cuerpo()" onmouseover="this.src='arrow_right_blur.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 13vw);" src="arrow_right.png" >
+	<img onclick="loadPetro2cuerpo2()" onmouseover="this.src='arrow_left_blur.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 13vw);" src="arrow_left.png" >
+	<img onclick="loadPetro2inferior()" onmouseover="this.src='arrow_right_blur.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 21vw);" src="arrow_right.png" >
+	<img onclick="loadPetro2inferior2()" onmouseover="this.src='arrow_left_blur.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 21vw);" src="arrow_left.png" >`;
+		document.getElementById("hands").innerHTML = mes;
+	}
+	function loadHands3(){
+		var mes = `
+		<img onclick="loadPint1head()" onmouseover="this.src='arrow_right_blur.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 60px; right: 27%;top: calc(200px + 4vw);" src="arrow_right.png" >
+	<img onclick="loadPint1head2()" onmouseover="this.src='arrow_left_blur.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 4vw);" src="arrow_left.png" >
+	<img onclick="loadPint1cuerpo()" onmouseover="this.src='arrow_right_blur.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 13vw);" src="arrow_right.png" >
+	<img onclick="loadPint1cuerpo2()" onmouseover="this.src='arrow_left_blur.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 13vw);" src="arrow_left.png" >
+	<img onclick="loadPint1inferior()" onmouseover="this.src='arrow_right_blur.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 21vw);" src="arrow_right.png" >
+	<img onclick="loadPint1inferior2()" onmouseover="this.src='arrow_left_blur.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 21vw);" src="arrow_left.png" >`;
+		document.getElementById("hands").innerHTML = mes;
+	}
+	function loadHands4(){
+		var mes = `
+		<img onclick="loadPint2head()" onmouseover="this.src='arrow_right_blur.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 60px; right: 27%;top: calc(200px + 4vw);" src="arrow_right.png" >
+	<img onclick="loadPint2head2()" onmouseover="this.src='arrow_left_blur.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 4vw);" src="arrow_left.png" >
+	<img onclick="loadPint2cuerpo()" onmouseover="this.src='arrow_right_blur.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 13vw);" src="arrow_right.png" >
+	<img onclick="loadPint2cuerpo2()" onmouseover="this.src='arrow_left_blur.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 13vw);" src="arrow_left.png" >
+	<img onclick="loadPint2inferior()" onmouseover="this.src='arrow_right_blur.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 50px; right: 27%;top: calc(200px + 21vw);" src="arrow_right.png" >
+	<img onclick="loadPint2inferior2()" onmouseover="this.src='arrow_left_blur.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 50px; left: 27%;top: calc(200px + 21vw);" src="arrow_left.png" >`;
 		document.getElementById("hands").innerHTML = mes;
 	}
 	function loadPetro1head(){
@@ -402,13 +451,13 @@ body {
 	function loadPetro2head(){
 		var mes;
 		if (p1head==1) {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 200px" src="cabeza_geo_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_geo_petro2.png" >'
 			p1head = 2;
 		}else if (p1head==2) {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 200px" src="cabeza_animal_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_zoo_petro2.png" >'
 			p1head =3;
 		}else {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 200px" src="cabeza_antro_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_antro_petro2.png" >'
 			p1head = 1;
 		}
 		document.getElementById("head").innerHTML = mes;
@@ -417,13 +466,13 @@ body {
 	function loadPetro2head2(){
 		var mes;
 		if (p1head==3) {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 200px" src="cabeza_geo_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_geo_petro2.png" >'
 			p1head = 2;
 		}else if (p1head==1) {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 200px" src="cabeza_animal_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_zoo_petro2.png" >'
 			p1head =3;
 		}else {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 200px" src="cabeza_antro_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_antro_petro2.png" >'
 			p1head = 1;
 		}
 		document.getElementById("head").innerHTML = mes;
@@ -432,13 +481,13 @@ body {
 	function loadPetro2cuerpo(){
 		var mes;
 		if (p1cuerpo==1) {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 380px" src="cuerpo_geo_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_geo_petro2.png" >'
 			p1cuerpo = 2;
 		}else if (p1cuerpo==2) {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 380px" src="cuerpo_animal_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_zoo_petro2.png" >'
 			p1cuerpo =3;
 		}else {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 380px" src="cuerpo_antro_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_antro_petro2.png" >'
 			p1cuerpo = 1;
 		}
 		document.getElementById("body").innerHTML = mes;
@@ -447,13 +496,13 @@ body {
 	function loadPetro2cuerpo2(){
 		var mes;
 		if (p1cuerpo==3) {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 380px" src="cuerpo_geo_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_geo_petro2.png" >'
 			p1cuerpo = 2;
 		}else if (p1cuerpo==1) {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 380px" src="cuerpo_animal_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_zoo_petro2.png" >'
 			p1cuerpo =3;
 		}else {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 380px" src="cuerpo_antro_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_antro_petro2.png" >'
 			p1cuerpo = 1;
 		}
 		document.getElementById("body").innerHTML = mes;
@@ -462,13 +511,13 @@ body {
 	function loadPetro2inferior(){
 		var mes;
 		if (p1inf==1) {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 560px" src="inferior_geo_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_geo_petro2.png" >'
 			p1inf = 2;
 		}else if (p1inf==2) {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 560px" src="inferior_animal_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_zoo_petro2.png" >'
 			p1inf =3;
 		}else {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 560px" src="inferior_antro_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_antro_petro2.png" >'
 			p1inf = 1;
 		}
 		document.getElementById("bot").innerHTML = mes;
@@ -477,13 +526,193 @@ body {
 	function loadPetro2inferior2(){
 		var mes;
 		if (p1inf==3) {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 560px" src="inferior_geo_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_geo_petro2.png" >'
 			p1inf = 2;
 		}else if (p1inf==1) {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 560px" src="inferior_animal_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_zoo_petro2.png" >'
 			p1inf =3;
 		}else {
-			mes = '<img style="position: absolute;height: 180px; right: 500px;top: 560px" src="inferior_antro_petro.png" >'
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_antro_petro2.png" >'
+			p1inf = 1;
+		}
+		document.getElementById("bot").innerHTML = mes;
+
+	}
+	function loadPint1head(){
+		var mes;
+		if (p1head==1) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_geo.png" >'
+			p1head = 2;
+		}else if (p1head==2) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_animal.png" >'
+			p1head =3;
+		}else {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_antro.png" >'
+			p1head = 1;
+		}
+		document.getElementById("head").innerHTML = mes;
+
+	}
+	function loadPint1head2(){
+		var mes;
+		if (p1head==3) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_geo.png" >'
+			p1head = 2;
+		}else if (p1head==1) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_animal.png" >'
+			p1head =3;
+		}else {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_antro.png" >'
+			p1head = 1;
+		}
+		document.getElementById("head").innerHTML = mes;
+
+	}
+	function loadPint1cuerpo(){
+		var mes;
+		if (p1cuerpo==1) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_geo.png" >'
+			p1cuerpo = 2;
+		}else if (p1cuerpo==2) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_animal.png" >'
+			p1cuerpo =3;
+		}else {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_antro.png" >'
+			p1cuerpo = 1;
+		}
+		document.getElementById("body").innerHTML = mes;
+
+	}
+	function loadPint1cuerpo2(){
+		var mes;
+		if (p1cuerpo==3) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_geo.png" >'
+			p1cuerpo = 2;
+		}else if (p1cuerpo==1) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_animal.png" >'
+			p1cuerpo =3;
+		}else {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_antro.png" >'
+			p1cuerpo = 1;
+		}
+		document.getElementById("body").innerHTML = mes;
+
+	}
+	function loadPint1inferior(){
+		var mes;
+		if (p1inf==1) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_geo.png" >'
+			p1inf = 2;
+		}else if (p1inf==2) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_animal.png" >'
+			p1inf =3;
+		}else {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_antro.png" >'
+			p1inf = 1;
+		}
+		document.getElementById("bot").innerHTML = mes;
+
+	}
+	function loadPint1inferior2(){
+		var mes;
+		if (p1inf==3) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_geo.png" >'
+			p1inf = 2;
+		}else if (p1inf==1) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_animal.png" >'
+			p1inf =3;
+		}else {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_antro.png" >'
+			p1inf = 1;
+		}
+		document.getElementById("bot").innerHTML = mes;
+
+	}
+	function loadPint2head(){
+		var mes;
+		if (p1head==1) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_geo2.png" >'
+			p1head = 2;
+		}else if (p1head==2) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_animal2.png" >'
+			p1head =3;
+		}else {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_antro2.png" >'
+			p1head = 1;
+		}
+		document.getElementById("head").innerHTML = mes;
+
+	}
+	function loadPint2head2(){
+		var mes;
+		if (p1head==3) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_geo2.png" >'
+			p1head = 2;
+		}else if (p1head==1) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_animal2.png" >'
+			p1head =3;
+		}else {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: 200px" src="cabeza_antro2.png" >'
+			p1head = 1;
+		}
+		document.getElementById("head").innerHTML = mes;
+
+	}
+	function loadPint2cuerpo(){
+		var mes;
+		if (p1cuerpo==1) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_geo2.png" >'
+			p1cuerpo = 2;
+		}else if (p1cuerpo==2) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_animal2.png" >'
+			p1cuerpo =3;
+		}else {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_antro2.png" >'
+			p1cuerpo = 1;
+		}
+		document.getElementById("body").innerHTML = mes;
+
+	}
+	function loadPint2cuerpo2(){
+		var mes;
+		if (p1cuerpo==3) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_geo2.png" >'
+			p1cuerpo = 2;
+		}else if (p1cuerpo==1) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_animal2.png" >'
+			p1cuerpo =3;
+		}else {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 9vw);" src="cuerpo_antro2.png" >'
+			p1cuerpo = 1;
+		}
+		document.getElementById("body").innerHTML = mes;
+
+	}
+	function loadPint2inferior(){
+		var mes;
+		if (p1inf==1) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_geo2.png" >'
+			p1inf = 2;
+		}else if (p1inf==2) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_animal2.png" >'
+			p1inf =3;
+		}else {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_antro2.png" >'
+			p1inf = 1;
+		}
+		document.getElementById("bot").innerHTML = mes;
+
+	}
+	function loadPint2inferior2(){
+		var mes;
+		if (p1inf==3) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_geo2.png" >'
+			p1inf = 2;
+		}else if (p1inf==1) {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_animal2.png" >'
+			p1inf =3;
+		}else {
+			mes = '<img style="position: absolute;height:9vw; right: 37%;top: calc(200px + 18vw);" src="inferior_antro2.png" >'
 			p1inf = 1;
 		}
 		document.getElementById("bot").innerHTML = mes;
