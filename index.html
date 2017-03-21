@@ -53,6 +53,10 @@ body {
 			width: 20%;
 			height: 50px;
 		}
+		p {
+			font-family: "bauhaus";
+			font-size: 1.5vw;
+		}
 		input[type=radio] {
    
     width: 1.5em;
@@ -130,6 +134,8 @@ body {
 <img src="footer_short.png" style="position: absolute;bottom: 0px; width: 26%;left: 36%; height: 7vh;">
 <a target="_blank" href="https://www.facebook.com/anarvenezuela/"><img src="facebook.png" style="position: absolute;bottom: 3px;left: 61%; height: 5vh;"></a>
 <a target="_blank" href="mailto:anarvenezuela@gmail.com"><img src="mail.png" style="position: absolute;bottom: 5px;left: 64%; height: 5vh;"></a>
+<img src="spain.png" style="position: absolute;bottom: 10px;left: 33%; height: 4vh;">
+<img src="uk.png" style="position: absolute;bottom: 10px;left: 36%; height: 4vh;">
 
 	
 	
@@ -160,8 +166,8 @@ body {
     	document.getElementById("rec").innerHTML = 
     	`<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
     	<img onclick="submit1();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
-    	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:2vw;width:15em;">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="font-size:1.5vw;width:15em;">
     		<b>Las Manifestaciones Rupestres son importantes porque: _____________</b><br>
   			<input type="radio" name="p1" value="Son obras artisticas" checked>Son obras artisticas<br>
  			<input type="radio" name="p1" value="Es posible trasladarlas de un sitio a otro">Es posible trasladarlas de un sitio a otro <br>
@@ -178,8 +184,8 @@ body {
     		document.getElementById("rec").innerHTML =
     	 `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
     	<img onclick="submit1();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
-    	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:2vw;width:15em;">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
     		<b>Las Manifestaciones Rupestres son importantes porque:_____________</b><br>
   			<input type="radio" name="p1" value="Son obras artisticas" checked>Son obras artisticas<br>
  			<input type="radio" name="p1" value="Es posible trasladarlas de un sitio a otro">Es posible trasladarlas de un sitio a otro <br>
@@ -191,8 +197,8 @@ body {
 		}else if(pregunta == 2 ){
 			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
     	<img onclick="submit2();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
-    	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:2vw;width:15em;">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
     		<b>El ____________ permite acercarnos a las diversas expresiones graficas, con los distintos contenidos de nuestras primeras sociedades</b><br>
   			<input type="radio" name="p2" value="Dolmen" checked>Dolmen<br>
  			<input type="radio" name="p2" value="Agua">Agua <br>
@@ -204,8 +210,8 @@ body {
 		}else if(pregunta==3){
 			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
     	<img onclick="submit3();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
-    	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:2vw;width:15em;">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
     		<b>¿En cuales de estas manifestaciones encontramos graficos o dibujos, pintados o grabados?</b><br>
   			<input type="radio" name="p3" value="Cerros Miticos Naturales" checked>Cerros Miticos Naturales<br>
  			<input type="radio" name="p3" value="Pinturas Rupestres, Pictografias o Micropetroglifos ">Pinturas Rupestres, Pictografias o Micropetroglifos <br>
@@ -218,21 +224,21 @@ body {
 		}else if(pregunta==4){
 			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
     	<img onclick="submit4();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
-    	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:2vw;width:15em;">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
     		<b>Se llaman ____________ las representaciones del Ser humano-cuerpo entero, la cabeza, huellas de manos y pies....</b><br>
   			<input type="radio" name="p4" value="Figuras Geometricas" checked>Figuras Geometricas<br>
  			<input type="radio" name="p4" value="Figuras Zoomorfas">Figuras Zoomorfas<br>
   			<input type="radio" name="p4" value="Figuras Antropomorfas">Figuras Antropomorfas<br>
-  			<input type="radio" name="p4" value="Figuras geozoomorfas">Figuras geozoomorfas
+  			<input type="radio" name="p4" value="Figuras Geozoomorfas">Figuras Geozoomorfas
   			</p>
 		</form>`;
 		pregunta = 5;
 		}else if (pregunta==5) {
 			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
     	<img onclick="submit5();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
-    	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:2vw;width:15em;">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
     		<b>Las representaciones de imagenes mas abstractas las llamamos ____________</b><br>
   			<input type="radio" name="p5" value="Zoomorfas" checked>Zoomorfas<br>
  			<input type="radio" name="p5" value="Antropomorfas">Antropomorfas<br>
@@ -244,8 +250,8 @@ body {
 		}else if (pregunta==6) {
 			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
     	<img onclick="submit6();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
-    	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:2vw;width:15em;">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
     		<b>Las figuras Zoomorfas son representaciones de:</b><br>
   			<input type="radio" name="p6" value="Plantas" checked>Plantas<br>
  			<input type="radio" name="p6" value="Animales">Animales<br>
@@ -257,8 +263,8 @@ body {
 		}else{
 			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
     	<img onclick="submit7();submitForm()" style="position:absolute; height:7vh;bottom:12vh; right: 25vw;" src="fin.png">
-    	<form style="position:absolute; top:210px;right:37%">
-    	    <p style="font-size:2vw;width:15em;">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
     		<b>La mezcla de figuras Antropomorfas + Zoomorfas genera representaciones _________________</b><br>
   			<input type="radio" name="p7" value="Geoantropomorfas" checked>Geoantropomorfas<br>
  			<input type="radio" name="p7" value="Antropozoomorfas">Antropozoomorfas<br>
