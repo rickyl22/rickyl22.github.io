@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	<title>Rupestrarium</title>
 	<style>
@@ -51,12 +52,14 @@ body {
 		.button{
 			background: transparent;
 			width: 20%;
-			height: 50px;
+			height: 6.5vh;
 		}
 		p {
 			font-family: "bauhaus";
 			font-size: 1.5vw;
 		}
+		
+		
 		input[type=radio] {
    
     width: 1.5em;
@@ -70,7 +73,7 @@ body {
 	
 	<img src="brown.png" style="position: absolute; width: 100%;height: 200px;">
 	
-	
+	<div id="pinturas-back" style="position:absolute;top:200px;left:20%;width:60%;bottom: 0px;"></div>
 	<div style="position: absolute;top: 200px;left: 40px;width: 20%;bottom: 0px;"><img style="height: 100%;width: 100%;" src="fondo_intro.jpg" ></div>
 	<div style="position: absolute;top: 200px;right: 40px;width: 20%;bottom: 0px;"><img style="height: 100%;width: 100%;" src="fondo_intro.jpg" ></div>
 	<img src="topbar.png" style="position: absolute;left: 0; width: 25%;height: 160px;top: 40px;">
@@ -81,26 +84,26 @@ body {
 	<img style="position: absolute;height: 40px;width: 100%; top: 160px" src="red.png" >
 	<div style="position: absolute;top: 160px;right: 0px;width: 40px;bottom: 0px;"><img style="height: 100%;width: 100%;" src="red.png" ></div>
 	<div style="position: absolute;top: 160px;left: 0px;width: 40px;bottom: 0px;"><img style="height: 100%;width: 100%;" src="red.png" ></div>
-	<img src="button_gray.png" style="position: absolute; width: 20%;top: 200px;right: 40px;height: 50px;">
-	<img src="button_gray.png" style="position: absolute; width: 20%;top: 250px;right: 40px;height: 50px;">
-	<img src="button_orange.png" style="position: absolute; width: 20%;top: 300px;right: 40px;height: 50px;">
-	<img src="button_orange.png" style="position: absolute; width: 20%;top: 350px;right: 40px;height: 50px;">
-	<img src="button_red.png" style="position: absolute; width: 20%;top: 400px;right: 40px;height: 50px;">
-	<img src="button_darkred.png" style="position: absolute; width: 20%;top: 200px;left: 40px;height: 50px;">
-	<img src="button_darkred.png" style="position: absolute; width: 20%;top: 250px;left: 40px;height: 50px;">
-	<img src="button_darkred.png" style="position: absolute; width: 20%;top: 300px;left: 40px;height: 50px;">
-	<img src="button_darkred.png" style="position: absolute; width: 20%;top: 350px;left: 40px;height: 50px;">
-	<img src="button_darkred.png" style="position: absolute; width: 20%;top: 400px;left: 40px;height: 50px;">
-	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 200px;left: 40px;" onclick="loadImage(1)"><b style="color: white;font-weight: lighter;">Presentación</b></button>
-	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 250px;left: 40px;" onclick="loadImage(2)"><b style="color: white;font-weight: lighter;">Introducción</b></button>
-	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 300px;left: 40px" onclick="loadImage(3)"><b style="color: white;font-weight: lighter;">Instrucciones</b></button>
-	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 350px;left: 40px;" onclick="loadImage(4)"><b style="color: white;font-weight: lighter;">Creditos</b></button>
-	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 400px;left: 40px;" onclick="loadImage(5)"><b style="color: white;font-weight: lighter;">Contacto</b></button>
-	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 200px;right: 40px;" onclick="loadPetro1();getDescription()"><b style="color: white;font-weight: lighter;">Petroglifos</b></button>
-	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 250px;right: 40px;" onclick="loadPetro2();getDescription()"><b style="color: white;font-weight: lighter;">Petroglifos 2</b></button>
-	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 300px;right: 40px;" onclick="loadPint1();getDescription()"><b style="color: white;font-weight: lighter;">Pinturas Rupestres</b></button>
-	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 350px;right: 40px;" onclick="loadPint2();getDescription()"><b style="color: white;font-weight: lighter;">Pinturas Rupestres 2</b></button>
-	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 400px;right: 40px;" onclick="loadRec()"><b style="color: white;font-weight: lighter;">Recapitulemos</b>
+	<img src="button_gray.png" style="position: absolute; width: 20%;top: 200px;right: 40px;height: 6.5vh;">
+	<img src="button_gray.png" style="position: absolute; width: 20%;top: calc(200px + 6.5vh);right: 40px;height: 6.5vh;">
+	<img src="button_orange.png" style="position: absolute; width: 20%;top: calc(200px + 13vh);right: 40px;height: 6.5vh;">
+	<img src="button_orange.png" style="position: absolute; width: 20%;top: calc(200px + 19.5vh);right: 40px;height: 6.5vh;">
+	<img src="button_red.png" style="position: absolute; width: 20%;top: calc(200px + 26vh);right: 40px;height: 6.5vh;">
+	<img src="button_darkred.png" style="position: absolute; width: 20%;top: 200px;left: 40px;height: 6.5vh;">
+	<img src="button_darkred.png" style="position: absolute; width: 20%;top: calc(200px + 6.5vh);left: 40px;height: 6.5vh;">
+	<img src="button_darkred.png" style="position: absolute; width: 20%;top: calc(200px + 13vh);left: 40px;height: 6.5vh;">
+	<img src="button_darkred.png" style="position: absolute; width: 20%;top: calc(200px + 19.5vh);left: 40px;height: 6.5vh;">
+	<img src="button_darkred.png" style="position: absolute; width: 20%;top: calc(200px + 26vh);left: 40px;height: 6.5vh;">
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 200px;left: 40px;" onclick="borrar();this.style.background='black'; loadImage(1)"><b style="color: white;font-weight: lighter;">Presentación</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: calc(200px + 6.5vh);left: 40px;" onclick="borrar();this.style.background='black';loadImage(2)"><b style="color: white;font-weight: lighter;">Introducción</b></button>:
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: calc(200px + 13vh);left: 40px" onclick="borrar();this.style.background='black';loadImage(3)"><b style="color: white;font-weight: lighter;">Instrucciones</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: calc(200px + 19.5vh);left: 40px;" onclick="borrar();this.style.background='black';loadImage(4)"><b style="color: white;font-weight: lighter;">Creditos</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: calc(200px + 26vh);left: 40px;" onclick="borrar();this.style.background='black';loadImage(5)"><b style="color: white;font-weight: lighter;">Contacto</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: 200px;right: 40px;" onclick="borrar();this.style.background='black';loadPetro1();getDescription('white')"><b style="color: white;font-weight: lighter;">Petroglifos</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: calc(200px + 6.5vh);right: 40px;" onclick="borrar();this.style.background='black';loadPetro2();getDescription('white')"><b style="color: white;font-weight: lighter;">Petroglifos 2</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: calc(200px + 13vh);right: 40px;" onclick="borrar();this.style.background='black';loadPint1();getDescription('black')"><b style="color: white;font-weight: lighter;">Pinturas Rupestres</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: calc(200px + 19.5vh);right: 40px;" onclick="borrar();this.style.background='black';loadPint2();getDescription('black')"><b style="color: white;font-weight: lighter;">Pinturas Rupestres 2</b></button>
+	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: calc(200px + 26vh);right: 40px;" onclick="borrar();this.style.background='black';loadRec()"><b style="color: white;font-weight: lighter;">Recapitulemos</b>
 	</button>
 	
 	
@@ -128,8 +131,9 @@ body {
 	
 </div>
 	<div id="rec" ></div>
-	
-<script>
+
+<script >
+
     var p1head = 3;
     var p1cuerpo = 3;
     var p1inf = 3;
@@ -142,6 +146,13 @@ body {
     var r6 = "a";
     var r7 = "a";
 
+    function borrar(){
+    	var elems = document.getElementsByTagName('button');
+    	for (var i = 0; i < elems.length; i++) {
+    		elems[i].style.background = 'transparent';
+		}
+    } 
+
     function loadRec(){
     	document.getElementById("hands").innerHTML = "";
 		document.getElementById("head").innerHTML = "";
@@ -149,6 +160,7 @@ body {
 		document.getElementById("bot").innerHTML = "";
 		document.getElementById("img").innerHTML = "";
 		document.getElementById("desc").innerHTML = "";
+		document.getElementById("pinturas-back").innerHTML = "";
     	document.getElementById("rec").innerHTML = 
     	`<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
     	<img onclick="submit1();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
@@ -310,6 +322,7 @@ body {
 		document.getElementById("bot").innerHTML = "";
 		document.getElementById("rec").innerHTML = "";
 		document.getElementById("desc").innerHTML = "";
+		document.getElementById("pinturas-back").innerHTML = "";
 		var mes;
 		if (num == 1) {
 			mes = '<div style="position: absolute;top: 200px;right:35%;width: 30%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="presentacion.png" ></div>'
@@ -330,6 +343,7 @@ body {
         document.getElementById("img").innerHTML = "";
         document.getElementById("rec").innerHTML = "";
         document.getElementById("desc").innerHTML = "";
+        document.getElementById("pinturas-back").innerHTML = "";
 		loadPetro1head();
 		loadPetro1cuerpo();
 		loadPetro1inferior();
@@ -339,6 +353,7 @@ body {
         document.getElementById("img").innerHTML = "";
         document.getElementById("rec").innerHTML = "";
         document.getElementById("desc").innerHTML = "";
+        document.getElementById("pinturas-back").innerHTML = "";
 		loadPetro2head();
 		loadPetro2cuerpo();
 		loadPetro2inferior();
@@ -348,6 +363,7 @@ body {
         document.getElementById("img").innerHTML = "";
         document.getElementById("rec").innerHTML = "";
         document.getElementById("desc").innerHTML = "";
+        document.getElementById("pinturas-back").innerHTML = "<img src = 'fondo_pintura.png' style = 'width:100%;height:100%;'>"
 		loadPint1head();
 		loadPint1cuerpo();
 		loadPint1inferior();
@@ -357,63 +373,141 @@ body {
         document.getElementById("img").innerHTML = "";
         document.getElementById("rec").innerHTML = "";
         document.getElementById("desc").innerHTML = "";
+        document.getElementById("pinturas-back").innerHTML = "<img src = 'fondo_pintura.png' style = 'width:100%;height:100%;'>"
 		loadPint2head();
 		loadPint2cuerpo();
 		loadPint2inferior();
 	}
-	function getDescription(){
+	function getDescription(color){
 		if (p1head == 1 && p1cuerpo == 1 && p1inf == 1) {
-			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:300;width:35em;color:white;'>Representaciones con elementos gráficos como puntos, líneas, círculos, o imágenes abstractas, compuestas con los mismos elementos.</p>
-				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:400;width:30em;color:white;'>ANTROPOMORFA</p>`;
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color +`;'>Figuras que representan al ser humano, de cuerpo entero, la cabeza, con huellas de manos y pies,como abstracción de la imagen</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ANTROPOMORFA</p>`;
 		}else if(p1head == 2 && p1cuerpo == 2 && p1inf == 2){
-			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:300;width:35em;color:white;'>Representaciones con elementos gráficos como puntos, líneas, círculos, o imágenes abstractas, compuestas con los mismos elementos.</p>
-				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:400;width:30em;color:white;'>GEOMETRICA</p>`;
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Representaciones con elementos gráficos como puntos, líneas, círculos, o imágenes abstractas,compuestas con los mismos elementos.</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>GEOMÉTRICA</p>`;
 		}else if(p1head == 3 && p1cuerpo == 3 && p1inf == 3){
-			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:300;width:35em;color:white;'>Representaciones con elementos gráficos como puntos, líneas, círculos, o imágenes abstractas, compuestas con los mismos elementos.</p>
-				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:400;width:30em;color:white;'>ZOOMORFA</p>`;
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Figuras de animales o con sus rasgos, recreando la naturaleza con un fin específico.</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ZOOMORFA</p>`;
+		}else if((p1head == 1 && p1cuerpo == 1 && p1inf == 3) || (p1head == 1 && p1cuerpo == 3 && p1inf == 1) || (p1head == 3 && p1cuerpo == 1 && p1inf == 1)){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Figuras Antropomorfas, mezcladas con componentes Zoomorfos generan representaciones Antropozoomorfas</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ANTROPOZOOMORFA</p>`;
+		}else if((p1head == 1 && p1cuerpo == 1 && p1inf == 2) || (p1head == 1 && p1cuerpo == 2 && p1inf == 1) || (p1head == 2 && p1cuerpo == 1 && p1inf == 1)){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Figuras Antropomorfas, mezcladas con
+
+componentes Geométricos generan
+
+representaciones Antropogeométricas</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ANTROPOGEOMÉTRICA</p>`;
+		}else if(p1head == 1 && p1cuerpo == 2 && p1inf == 3){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Figuras Antropomorfas, mezcladas con
+
+componentes Geométricos y Zoomorfos generan
+
+representaciones Antropogeozoomorfas.</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ANTROPOGEOZOOMORFA</p>`;
+		}else if(p1head == 1 && p1cuerpo == 3 && p1inf == 2){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Figuras Antropomorfas, mezcladas con
+
+componentes Zoomorfos y Geométricos generan
+
+representaciones Antropozoogeométricas.</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ANTROPOZOOGEOMÉTRICA</p>`;
+		}else if((p1head == 2 && p1cuerpo == 2 && p1inf == 1) || (p1head == 2 && p1cuerpo == 1 && p1inf == 2) || (p1head == 1 && p1cuerpo == 2 && p1inf == 2)){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Figuras Geométricas,mezcladas con componentes
+
+Antropomorfos generan representaciones
+
+Geoantropomorfas.</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>GEOANTROPOMORFA</p>`;
+		}else if((p1head == 2 && p1cuerpo == 2 && p1inf == 3) || (p1head == 2 && p1cuerpo == 3 && p1inf == 2) || (p1head == 3 && p1cuerpo == 2 && p1inf == 2)){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Figuras Geométricas, mezcladas con componentes
+
+Zoomorfos generan representaciones
+
+Geozoomorfas.</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>GEOZOOMORFA</p>`;
+		}else if(p1head == 2 && p1cuerpo == 1 && p1inf == 3){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Figuras Geométricas, mezcladas con componentes
+
+Antropomorfos Y Zoomorfos generan
+
+representaciones Geozooantropomorfas</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>GEOANTROPOZOOMORFA</p>`;
+		}else if(p1head == 2 && p1cuerpo == 3 && p1inf == 1){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Figuras Geométricas, mezcladas con componentes
+
+Zoomorfos y Antropomorfos generan
+
+representaciones Geozooantropomorfas.</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>GEOZOOANTROPOMORFA</p>`;
+		}else if((p1head == 3 && p1cuerpo == 3 && p1inf == 1) || (p1head == 3 && p1cuerpo == 1 && p1inf == 3) || (p1head == 1 && p1cuerpo == 3 && p1inf == 3)){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Figuras Zoomorfas, mezcladas con componentes
+
+Antropomorfos generan representaciones
+
+Zooantropomorfas</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ZOOANTROPOMORFA</p>`;
+		}else if((p1head == 3 && p1cuerpo == 3 && p1inf == 2) || (p1head == 3 && p1cuerpo == 2 && p1inf == 3) || (p1head == 2 && p1cuerpo == 3 && p1inf == 3)){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Figuras Zoomorfas, mezcladas con componentes
+
+Geométricas generan representaciones
+
+Zoogeométricas.</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ZOOGEOMÉTRICA</p>`;
+		}else if(p1head == 3 && p1cuerpo == 1 && p1inf == 2){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Figuras Zoomorfas, mezcladas con componentes
+
+Antropomorfos y Geométricos generan
+
+representaciones Zooantropogeométricas.</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ZOOANTROPOGEOMÉTRICA</p>`;
 		}else {
-			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:300;width:35em;color:white;'>Representaciones con elementos gráficos como puntos, líneas, círculos, o imágenes abstractas, compuestas con los mismos elementos.</p>
-				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:400;width:30em;color:white;'>OTRA</p>`;
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Figuras Zoomorfas, mezcladas con componentes
+
+Geométricos y Antropomorfos generan
+
+representaciones Zoogeoantropomorfas.</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ZOOGEOANTROPOMORFA</p>`;
 		}
 	}
 	function loadHands1(){
 		var mes = `
-		<img onclick="loadPetro1head();getDescription()" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right.png" >
-	<img onclick="loadPetro1head2();getDescription()" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left.png" >
-	<img onclick="loadPetro1cuerpo();getDescription()" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right.png" >
-	<img onclick="loadPetro1cuerpo2();getDescription()" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left.png" >
-	<img onclick="loadPetro1inferior();getDescription()" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right.png" >
-	<img onclick="loadPetro1inferior2();getDescription()" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left.png" >`;
+		<img onclick="loadPetro1head();getDescription('white')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right.png" >
+	<img onclick="loadPetro1head2();getDescription('white')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left.png" >
+	<img onclick="loadPetro1cuerpo();getDescription('white')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right.png" >
+	<img onclick="loadPetro1cuerpo2();getDescription('white')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left.png" >
+	<img onclick="loadPetro1inferior();getDescription('white')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right.png" >
+	<img onclick="loadPetro1inferior2();getDescription('white')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left.png" >`;
 		document.getElementById("hands").innerHTML = mes;
 	}
 	function loadHands2(){
 		var mes = `
-		<img onclick="loadPetro2head();getDescription()" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right.png" >
-	<img onclick="loadPetro2head2();getDescription()" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left.png" >
-	<img onclick="loadPetro2cuerpo();getDescription()" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right.png" >
-	<img onclick="loadPetro2cuerpo2();getDescription()" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left.png" >
-	<img onclick="loadPetro2inferior();getDescription()" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right.png" >
-	<img onclick="loadPetro2inferior2();getDescription()" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left.png" >`;
+		<img onclick="loadPetro2head();getDescription('white')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right.png" >
+	<img onclick="loadPetro2head2();getDescription('white')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left.png" >
+	<img onclick="loadPetro2cuerpo();getDescription('white')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right.png" >
+	<img onclick="loadPetro2cuerpo2();getDescription('white')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left.png" >
+	<img onclick="loadPetro2inferior();getDescription('white')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right.png" >
+	<img onclick="loadPetro2inferior2();getDescription('white')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left.png" >`;
 		document.getElementById("hands").innerHTML = mes;
 	}
 	function loadHands3(){
 		var mes = `
-		<img onclick="loadPint1head();getDescription()" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right_pint.png" >
-	<img onclick="loadPint1head2();getDescription()" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left_pint.png" >
-	<img onclick="loadPint1cuerpo();getDescription()" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right_pint.png" >
-	<img onclick="loadPint1cuerpo2();getDescription()" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left_pint.png" >
-	<img onclick="loadPint1inferior();getDescription()" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right_pint.png" >
-	<img onclick="loadPint1inferior2();getDescription()" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left_pint.png" >`;
+		<img onclick="loadPint1head();getDescription('black')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right_pint.png" >
+	<img onclick="loadPint1head2();getDescription('black')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left_pint.png" >
+	<img onclick="loadPint1cuerpo();getDescription('black')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right_pint.png" >
+	<img onclick="loadPint1cuerpo2();getDescription('black')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left_pint.png" >
+	<img onclick="loadPint1inferior();getDescription('black')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right_pint.png" >
+	<img onclick="loadPint1inferior2();getDescription('black')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left_pint.png" >`;
 		document.getElementById("hands").innerHTML = mes;
 	}
 	function loadHands4(){
 		var mes = `
-		<img onclick="loadPint2head();getDescription()" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right_pint.png" >
-	<img onclick="loadPint2head2();getDescription()" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left_pint.png" >
-	<img onclick="loadPint2cuerpo();getDescription()" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right_pint.png" >
-	<img onclick="loadPint2cuerpo2();getDescription()" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left_pint.png" >
-	<img onclick="loadPint2inferior();getDescription()" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right_pint.png" >
-	<img onclick="loadPint2inferior2();getDescription()" onmouseover="this.src='arrow_left_pint_blur.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left_pint.png" >`;
+		<img onclick="loadPint2head();getDescription('black')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right_pint.png" >
+	<img onclick="loadPint2head2();getDescription('black')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left_pint.png" >
+	<img onclick="loadPint2cuerpo();getDescription('black')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right_pint.png" >
+	<img onclick="loadPint2cuerpo2();getDescription('black')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left_pint.png" >
+	<img onclick="loadPint2inferior();getDescription('black')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right_pint.png" >
+	<img onclick="loadPint2inferior2();getDescription('black')" onmouseover="this.src='arrow_left_pint_blur.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left_pint.png" >`;
 		document.getElementById("hands").innerHTML = mes;
 	}
 	function loadPetro1head(){
