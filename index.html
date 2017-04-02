@@ -121,10 +121,10 @@ body {
 
 	<img src="black.png" style="position: absolute;bottom: 0px; width: 100%; height: 7vh;">
 <img src="footer_short.png" style="position: absolute;bottom: 0px; width: 26%;left: 36%; height: 7vh;">
-<a target="_blank" href="https://www.facebook.com/anarvenezuela/"><img src="facebook.png" style="position: absolute;bottom: 3px;left: 61%; height: 5vh;"></a>
-<a target="_blank" href="mailto:anarvenezuela@gmail.com"><img src="mail.png" style="position: absolute;bottom: 5px;left: 64%; height: 5vh;"></a>
-<img src="spain.png" style="position: absolute;bottom: 10px;left: 33%; height: 4vh;">
-<img src="uk.png" style="position: absolute;bottom: 10px;left: 36%; height: 4vh;">
+<a target="_blank" href="https://www.facebook.com/anarvenezuela/"><img onmouseover="this.style.height = '5.3vh'" onmouseout="this.style.height = '5vh'" src="facebook.png" style="position: absolute;bottom: 3px;left: 61%; height: 5vh;"></a>
+<a target="_blank" href="mailto:anarvenezuela@gmail.com"><img src="mail.png" onmouseover="this.style.height = '5.3vh'" onmouseout="this.style.height = '5vh'" style="position: absolute;bottom: 5px;left: 64%; height: 5vh;"></a>
+<img src="spain.png" onclick="translate_buttons('spanish');" onmouseover="this.style.height = '4.3vh'" onmouseout="this.style.height = '4vh'" style="position: absolute;bottom: 10px;left: 33%; height: 4vh;">
+<img src="uk.png" onclick="translate_buttons('english');" onmouseover="this.style.height = '4.3vh'" onmouseout="this.style.height = '4vh'" style="position: absolute;bottom: 10px;left: 36%; height: 4vh;">
 
 	
 	
@@ -145,6 +145,9 @@ body {
     var r5 = "a";
     var r6 = "a";
     var r7 = "a";
+    var lenguage = "spanish";
+    var figures = 0;
+    var rec = 0;
 
     function borrar(){
     	var elems = document.getElementsByTagName('button');
@@ -153,7 +156,77 @@ body {
 		}
     } 
 
+    function translate_buttons(leng){
+    	var elems = document.getElementsByTagName('button');
+    	if(leng == 'english' && lenguage == 'spanish'){
+    		lenguage = 'english';
+    	for (var i = 0; i < elems.length; i++) {
+    		if(elems[i].textContent == 'Presentación'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Presentation</b>`;
+    		}else if(elems[i].textContent == 'Introducción'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Introduction</b>`;
+    		}else if(elems[i].textContent == 'Instrucciones'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Instructions</b>`;
+    		}else if(elems[i].textContent == 'Creditos'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Credits</b>`;
+    		}else if(elems[i].textContent == 'Contacto'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Contact</b>`;
+    		}else if(elems[i].textContent == 'Petroglifos'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Petroglyphs</b>`;
+    		}else if(elems[i].textContent == 'Petroglifos 2'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Petroglyphs 2</b>`;
+    		}else if(elems[i].textContent == 'Pinturas Rupestres'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Rock Paintings</b>`;
+    		}else if(elems[i].textContent == 'Pinturas Rupestres 2'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Rock Paintings 2</b>`;
+    		}else if(elems[i].textContent == 'Recapitulemos'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Recapitulate</b>`;
+    		}else{
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Recapitulate</b>`;
+    		}
+		}
+		}
+		if(leng == 'spanish' && lenguage == 'english'){
+			lenguage = 'spanish';
+			for (var i = 0; i < elems.length; i++) {
+    		if(elems[i].textContent == 'Presentation'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Presentación</b>`;
+    		}else if(elems[i].textContent == 'Introduction'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Introducción</b>`;
+    		}else if(elems[i].textContent == 'Instructions'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Instrucciones</b>`;
+    		}else if(elems[i].textContent == 'Credits'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Creditos</b>`;
+    		}else if(elems[i].textContent == 'Contact'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Contacto</b>`;
+    		}else if(elems[i].textContent == 'Petroglyphs'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Petroglifos</b>`;
+    		}else if(elems[i].textContent == 'Petroglyphs 2'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Petroglifos 2</b>`;
+    		}else if(elems[i].textContent == 'Rock Paintings'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Pinturas Rupestres</b>`;
+    		}else if(elems[i].textContent == 'Rock Paintings 2'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Pinturas Rupestres 2</b>`;
+    		}else if(elems[i].textContent == 'Recapitulate'){
+    			elems[i].innerHTML = `<b style="color: white;font-weight: lighter;">Recapitulemos</b>`;
+    		}
+			}
+		}
+		if(figures == 1){
+			getDescription('white');
+		}else if(figures == 2){
+			getDescription('black');
+		}
+		if(rec == 1){
+			pregunta = pregunta-1;
+			nextPreg();
+		}
+    }
+
     function loadRec(){
+    	pregunta = 1;
+    	figures = 0;
+    	rec = 1;
     	document.getElementById("hands").innerHTML = "";
 		document.getElementById("head").innerHTML = "";
 		document.getElementById("body").innerHTML = "";
@@ -161,30 +234,129 @@ body {
 		document.getElementById("img").innerHTML = "";
 		document.getElementById("desc").innerHTML = "";
 		document.getElementById("pinturas-back").innerHTML = "";
-    	document.getElementById("rec").innerHTML = 
-    	`<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
-    	<img onclick="submit1();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
-    	<form style="position:absolute; top:210px;left:37%">
-    	    <p style="font-size:1.5vw;width:15em;">
-    		<b>Las Manifestaciones Rupestres son importantes porque: _____________</b><br>
-  			<input type="radio" name="p1" value="Son obras artisticas" checked>Son obras artisticas<br>
- 			<input type="radio" name="p1" value="Es posible trasladarlas de un sitio a otro">Es posible trasladarlas de un sitio a otro <br>
-  			<input type="radio" name="p1" value="Son el intento mas antiguo de comunicacion<br> humana">Son el intento mas antiguo de comunicacion humana<br>
-  			<input type="radio" name="p1" value="Se encuentran solo en Africa"> Se encuentran solo en Africa
-  			</p>
-		</form>
-		`;
-		pregunta = 2;
+    	nextPreg();
     }
 
     function nextPreg(){
+    	if(lenguage == 'spanish'){
+    		nextPregEs();
+    	}else{
+    		nextPregEn();
+    	}
+    }
+
+    function nextPregEn(){
     	if(pregunta == 1){
     		document.getElementById("rec").innerHTML =
     	 `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
     	<img onclick="submit1();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
     	<form style="position:absolute; top:210px;left:37%">
     	    <p style="width:15em;">
-    		<b>Las Manifestaciones Rupestres son importantes porque:_____________</b><br>
+    		<b>The Rock Art expressions are important, because: _____________________</b><br>
+  			<input type="radio" name="p1" value="Son obras artisticas" checked>They are artistic works<br>
+ 			<input type="radio" name="p1" value="Es posible trasladarlas de un sitio a otro">It is possible to transfer them from one site to another<br>
+  			<input type="radio" name="p1" value="Son el intento mas antiguo de comunicacion<br> humana">Are the oldest attempt of human communication<br>
+  			<input type="radio" name="p1" value="Se encuentran solo en Africa"> Are located only in Africa
+  			</p>
+		</form>`;
+		pregunta = 2;
+		}else if(pregunta == 2 ){
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="submit2();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
+    		<b>The ____________________ allows us to reach the diverse graphic
+
+expressions, with the different contents of our first societies.</b><br>
+  			<input type="radio" name="p2" value="Dolmen" checked>Dolmen<br>
+ 			<input type="radio" name="p2" value="Agua">Water <br>
+  			<input type="radio" name="p2" value="Arte Rupestre">Rock Art<br>
+  			<input type="radio" name="p2" value="Baile">Dance
+  			</p>
+		</form>`;
+		pregunta = 3;
+		}else if(pregunta==3){
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="submit3();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
+    		<b>In which of these Expressions do we find graphics or drawings, painted or engraved?<br>
+    		<input type="radio" name="p3" value="Cerros Miticos Naturales" checked>Mythical Natural Hills<br>
+ 			<input type="radio" name="p3" value="Pinturas Rupestres, Pictografias o Micropetroglifos ">Rock Art Paintings or Pictograms<br>
+  			<input type="radio" name="p3" value="Puntos Acoplados">Connected Points<br>
+  			<input type="radio" name="p3" value="Solo Micropetroglifos">Micro Petroglyphs
+  			</p>
+		</form>`;
+		pregunta = 4;
+
+		}else if(pregunta==4){
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="submit4();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
+    		<b>_______________________ are human representations of the Human Being –
+
+whole body, head, hands and feet prints…-</b><br>
+  			<input type="radio" name="p4" value="Figuras Geometricas" checked>Geometric figures<br>
+ 			<input type="radio" name="p4" value="Figuras Zoomorfas">Zoomorphic figures<br>
+  			<input type="radio" name="p4" value="Figuras Antropomorfas">Anthropomorphic figures<br>
+  			<input type="radio" name="p4" value="Figuras Geozoomorfas">Geozoomorphic figures
+  			</p>
+		</form>`;
+		pregunta = 5;
+		}else if (pregunta==5) {
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="submit5();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
+    		<b>Representation of more abstract images are called____________________, or _______________-</b><br>
+  			<input type="radio" name="p5" value="Zoomorfas" checked>Zoomorphic<br>
+ 			<input type="radio" name="p5" value="Antropomorfas">Anthropomorphic<br>
+  			<input type="radio" name="p5" value="Geometricas o formas libres">Geometric or free figures<br>
+  			<input type="radio" name="p5" value="Geomorfas">Geomorphic
+  			</p>
+		</form>`;
+		pregunta = 6;
+		}else if (pregunta==6) {
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="submit6();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
+    		<b>Zoomorphic shapes are representations of:</b><br>
+  			<input type="radio" name="p6" value="Plantas" checked>Plants<br>
+ 			<input type="radio" name="p6" value="Animales">Animals<br>
+  			<input type="radio" name="p6" value="Seres humanos">Human beings<br>
+  			<input type="radio" name="p6" value="Cestas">Baskets
+  			</p>
+		</form>`;
+		pregunta = 7;
+		}else{
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="submit7();submitForm()" style="position:absolute; height:6vh;bottom:11vh; right: 24vw;" src="end.png">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
+    		<b>Combination of anthropomorphic and Zoomorphic shapes
+
+generates ___________________ representations</b><br>
+  			<input type="radio" name="p7" value="Geoantropomorfas" checked>Geoanthropomorphic<br>
+ 			<input type="radio" name="p7" value="Antropozoomorfas">Anthropozoomorphic<br>
+  			<input type="radio" name="p7" value="Zoogeometricas">Zoogeometric<br>
+  			<input type="radio" name="p7" value="Zooantropogeometricas">Zooanthropomorphic
+  			</p>
+		</form>`;
+
+		pregunta = 1;
+		}
+    }
+
+    function nextPregEs(){
+    	if(pregunta == 1){
+    		document.getElementById("rec").innerHTML =
+    	 `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
+    	<img onclick="submit1();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
+    	<form style="position:absolute; top:210px;left:37%">
+    	    <p style="width:15em;">
+    		<b>Las Manifestaciones Rupestres son importantes porque: _____________</b><br>
   			<input type="radio" name="p1" value="Son obras artisticas" checked>Son obras artisticas<br>
  			<input type="radio" name="p1" value="Es posible trasladarlas de un sitio a otro">Es posible trasladarlas de un sitio a otro <br>
   			<input type="radio" name="p1" value="Son el intento mas antiguo de comunicacion<br> humana">Son el intento mas antiguo de comunicacion humana<br>
@@ -260,7 +432,7 @@ body {
 		pregunta = 7;
 		}else{
 			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
-    	<img onclick="submit7();submitForm()" style="position:absolute; height:7vh;bottom:12vh; right: 23vw;" src="fin.png">
+    	<img onclick="submit7();submitForm()" style="position:absolute; height:6vh;bottom:11vh; right: 24vw;" src="fin.png">
     	<form style="position:absolute; top:210px;left:37%">
     	    <p style="width:15em;">
     		<b>La mezcla de figuras Antropomorfas + Zoomorfas genera representaciones _________________</b><br>
@@ -316,6 +488,8 @@ body {
     }
 
 	function loadImage(num){
+		figures = 0;
+		rec = 0;
 		document.getElementById("hands").innerHTML = "";
 		document.getElementById("head").innerHTML = "";
 		document.getElementById("body").innerHTML = "";
@@ -325,20 +499,22 @@ body {
 		document.getElementById("pinturas-back").innerHTML = "";
 		var mes;
 		if (num == 1) {
-			mes = '<div style="position: absolute;top: 200px;right:35%;width: 30%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="presentacion.png" ></div>'
+			mes = '<div style="position: absolute;top: 200px;right:35%;width: 30%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="presentacion_nuevo.png" ></div>'
 		}else if (num == 2) {
-			mes = '<div style="position: absolute;top: 200px;right:35%;width: 30%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="intro.png" ></div>'
+			mes = '<div style="position: absolute;top: 200px;right:35%;width: 30%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="intro_nuevo.png" ></div>'
 		}else if(num == 3){
-			mes = '<div style="position: absolute;top: 200px;right:35%;width: 30%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="instruc.png" ></div>'
+			mes = '<div style="position: absolute;top: 200px;right:35%;width: 30%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="instruc_nuevo.png" ></div>'
 		}else if (num == 4) {
-			mes = '<div style="position: absolute;top: 200px;right:35%;width: 30%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="cred_es.png" ></div>'
+			mes = '<div style="position: absolute;top: 200px;right:35%;width: 30%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="creditos_nuevo.png" ></div>'
 		}else{
-			mes = '<div style="position: absolute;top: 200px;right:35%;width: 30%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="contacto.png" ></div>'
+			mes = '<div style="position: absolute;top: 200px;right:35%;width: 30%;bottom: 7vh;"><img style="height: 100%;width: 100%;" src="contacto_nuevo.png" ></div>'
 		}
 		document.getElementById("img").innerHTML = mes;
 	}
 	
 	function loadPetro1(){
+		figures = 1;
+		rec = 0;
 		loadHands1();
         document.getElementById("img").innerHTML = "";
         document.getElementById("rec").innerHTML = "";
@@ -349,6 +525,8 @@ body {
 		loadPetro1inferior();
 	}
 	function loadPetro2(){
+		figures = 1;
+		rec = 0;
 		loadHands2();
         document.getElementById("img").innerHTML = "";
         document.getElementById("rec").innerHTML = "";
@@ -359,6 +537,8 @@ body {
 		loadPetro2inferior();
 	}
 	function loadPint1(){
+		figures = 2;
+		rec = 0;
 		loadHands3();
         document.getElementById("img").innerHTML = "";
         document.getElementById("rec").innerHTML = "";
@@ -369,6 +549,8 @@ body {
 		loadPint1inferior();
 	}
 	function loadPint2(){
+		figures = 2;
+		rec = 0;
 		loadHands4();
         document.getElementById("img").innerHTML = "";
         document.getElementById("rec").innerHTML = "";
@@ -378,7 +560,139 @@ body {
 		loadPint2cuerpo();
 		loadPint2inferior();
 	}
+
 	function getDescription(color){
+		if(lenguage == 'spanish'){
+			getDescriptionEsp(color);
+		}else{
+			getDescriptionEn(color);
+		}
+	}
+	function getDescriptionEn(color){
+		if (p1head == 1 && p1cuerpo == 1 && p1inf == 1) {
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color +`;'>Figures that represent the human being,
+
+whole body, head, hands and feet prints,
+
+image abstraction</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ANTHROPOMORPHIC</p>`;
+		}else if(p1head == 2 && p1cuerpo == 2 && p1inf == 2){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Representation with graphic elements like
+
+dots, lines, circles, or images more abstract,
+
+formed with the same elements.</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>GEOMETRIC</p>`;
+		}else if(p1head == 3 && p1cuerpo == 3 && p1inf == 3){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Animal figures with their own features
+
+recreating nature with a specific purpose.</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ZOOMORPHIC</p>`;
+		}else if((p1head == 1 && p1cuerpo == 1 && p1inf == 3) || (p1head == 1 && p1cuerpo == 3 && p1inf == 1) || (p1head == 3 && p1cuerpo == 1 && p1inf == 1)){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Anthropomorphic figures, combined with
+
+Zoomorphic parts generate
+
+Anthropozoomorphic representations</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ANTHROPOZOOMORPHIC</p>`;
+		}else if((p1head == 1 && p1cuerpo == 1 && p1inf == 2) || (p1head == 1 && p1cuerpo == 2 && p1inf == 1) || (p1head == 2 && p1cuerpo == 1 && p1inf == 1)){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Anthropomorphic figures combined with
+
+Geometric parts or components generate
+
+Anthropogeometric representations</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ANTHROPOGEOMETRIC</p>`;
+		}else if(p1head == 1 && p1cuerpo == 2 && p1inf == 3){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Anthropomorphic figures combined with
+
+Geometric and Zoomorphic components
+
+generate Anthropogeozoomorphic
+
+representations</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ANTHROPOGEOZOOMORPHIC</p>`;
+		}else if(p1head == 1 && p1cuerpo == 3 && p1inf == 2){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Anthropomorphic figures combined with
+
+Zoomorphic and Geometric components
+
+generate Anthropozoogeometric
+
+representations</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ANTHROPOZOOGEOMETRIC</p>`;
+		}else if((p1head == 2 && p1cuerpo == 2 && p1inf == 1) || (p1head == 2 && p1cuerpo == 1 && p1inf == 2) || (p1head == 1 && p1cuerpo == 2 && p1inf == 2)){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Geometric figures combined with
+
+Anthropomorphic components generate
+
+Geoanthropomorphic representations.</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>GEOANTHROPOMORPHIC</p>`;
+		}else if((p1head == 2 && p1cuerpo == 2 && p1inf == 3) || (p1head == 2 && p1cuerpo == 3 && p1inf == 2) || (p1head == 3 && p1cuerpo == 2 && p1inf == 2)){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Geometric figures combined with
+
+Zoomorphic components generate
+
+Geozoomorphic representations</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>GEOZOOMORPHIC</p>`;
+		}else if(p1head == 2 && p1cuerpo == 1 && p1inf == 3){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Geometric figures combined with
+
+Anthropomorphic and Zoomorphic 
+
+components generate
+
+Geozooanthropomorphic
+
+representations</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>GEOANTHROPOZOOMORPHIC</p>`;
+		}else if(p1head == 2 && p1cuerpo == 3 && p1inf == 1){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Geometric figures combined with
+
+Zoomorphic and Anthropomorphic
+
+components generate
+
+Geozooanthropomorphic
+
+representations</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>GEOZOOANTHROPOMORPHIC</p>`;
+		}else if((p1head == 3 && p1cuerpo == 3 && p1inf == 1) || (p1head == 3 && p1cuerpo == 1 && p1inf == 3) || (p1head == 1 && p1cuerpo == 3 && p1inf == 3)){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Zoomorphic figures combined with
+
+Anthropomorphic components generate
+
+Zooanthropomorphic representations</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ZOOANTHROPOMORPHIC</p>`;
+		}else if((p1head == 3 && p1cuerpo == 3 && p1inf == 2) || (p1head == 3 && p1cuerpo == 2 && p1inf == 3) || (p1head == 2 && p1cuerpo == 3 && p1inf == 3)){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Zoomorphic figures combined with
+
+Geometric components generate
+
+Zoogeometric representations</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ZOOGEOMETRIC</p>`;
+		}else if(p1head == 3 && p1cuerpo == 1 && p1inf == 2){
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Zoomorphic figures combined with
+
+Anthropomorphic and Geometric
+
+components generate
+
+Zooanthropogeometric representations</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ZOOANTHROPOGEOMETRIC</p>`;
+		}else {
+			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color + `;'>Zoomorphic figures combined with
+
+Geometric and Anthropomorphic
+
+components generate
+
+Zoogeoanthropomorphic
+
+representations</p>
+				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ZOOGEOANTHROPOMORPHIC</p>`;
+		}
+	}
+	function getDescriptionEsp(color){
 		if (p1head == 1 && p1cuerpo == 1 && p1inf == 1) {
 			document.getElementById("desc").innerHTML = `<p style='position:absolute;top:200px;left:0;right:0;margin: auto;text-align: center;font-family: "bauhaus";font-size: 1.9vh;text-align: center;font-weight:600;width:35em;color:` + color +`;'>Figuras que representan al ser humano, de cuerpo entero, la cabeza, con huellas de manos y pies,como abstracción de la imagen</p>
 				<p style='position:absolute;bottom:7vh;left:0;right:0;margin: auto;text-align: center; font-family: "bauhaus";font-size: 2vh;font-weight:600;width:30em;color:` + color +`;'>ANTROPOMORFA</p>`;
