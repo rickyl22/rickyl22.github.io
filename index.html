@@ -22,37 +22,12 @@ body {
  			 position: relative;
  			 top: 0;
   			 left: 0;
-		}
-		.image1 {
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-		.image2 {
-			position: absolute;
-			top: 10px;
-			left: 10px;
-			height: 140px;
-		}
-		.image3 {
-			position: absolute;
-			width: 30%;
-			height: 50px;
-			top: 50px;
-			
-			margin-left: 35%;
-			
-		}
-		.image4{
-			position: absolute;
-			width: 220px;
-			right: 30px;
-			top: 20px;
-		}
+		}	
 		.button{
 			background: transparent;
 			width: 20%;
 			height: 6.5vh;
+			outline: none;
 		}
 		p {
 			font-family: "bauhaus";
@@ -69,10 +44,7 @@ body {
 </head>
 <body>
 <div class="parent" style="height: 100%;">
-	<!--img class = "image1" src="brown.png" width="100%" height="200"-->
-	
 	<img src="brown.png" style="position: absolute; width: 100%;height: 200px;">
-	
 	<div id="pinturas-back" style="position:absolute;top:200px;left:20%;width:60%;bottom: 0px;"></div>
 	<div style="position: absolute;top: 200px;left: 40px;width: 20%;bottom: 0px;"><img style="height: 100%;width: 100%;" src="fondo_intro.jpg" ></div>
 	<div style="position: absolute;top: 200px;right: 40px;width: 20%;bottom: 0px;"><img style="height: 100%;width: 100%;" src="fondo_intro.jpg" ></div>
@@ -105,8 +77,6 @@ body {
 	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: calc(200px + 19.5vh);right: 40px;" onclick="borrar();this.style.background='black';loadPint2();getDescription('black')"><b style="color: white;font-weight: lighter;">Pinturas Rupestres 2</b></button>
 	<button class="button" style="position: absolute;font-family: 'bauhaus';font-size: 2vw; top: calc(200px + 26vh);right: 40px;" onclick="borrar();this.style.background='black';loadRec()"><b style="color: white;font-weight: lighter;">Recapitulemos</b>
 	</button>
-	
-	
 	<object pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" type="application/x-shockwave-flash" play = "true" style="position: absolute;width: 50%; height: 120px;left: 3%;top: 40px" data="grabado-izquierdo2.swf"></object>
 	<object pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" type="application/x-shockwave-flash" play = "true" style="position: absolute;width: 50%; height: 120px;right: 3%;top: 40px" data="grabado-derecho2.swf"></object>
 	<div id="images" >
@@ -145,9 +115,11 @@ body {
     var r5 = "a";
     var r6 = "a";
     var r7 = "a";
+    var r8 = "a";
     var lenguage = "spanish";
     var figures = 0;
     var rec = 0;
+    var parts = ['Antropomorfa','Geometrica','Zoomorfa'];
 
     function borrar(){
     	var elems = document.getElementsByTagName('button');
@@ -307,13 +279,15 @@ whole body, head, hands and feet prints…-</b><br>
 		}else if (pregunta==5) {
 			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
     	<img onclick="submit5();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
-    	<form style="position:absolute; top:210px;left:37%">
-    	    <p style="width:15em;">
-    		<b>Representation of more abstract images are called____________________, or _______________-</b><br>
-  			<input type="radio" name="p5" value="Zoomorfas" checked>Zoomorphic<br>
- 			<input type="radio" name="p5" value="Antropomorfas">Anthropomorphic<br>
-  			<input type="radio" name="p5" value="Geometricas o formas libres">Geometric or free figures<br>
-  			<input type="radio" name="p5" value="Geomorfas">Geomorphic
+    	<form style="position:absolute; top:210px;left:33%">
+    	    <p style="width:22em;">
+    		<b>Representation of more abstract images are called ______________, or _______________</b><br>
+  			<input type="radio" name="p5" value="Zoomorfas - Antropomorfas" checked>Zoomorphic or Anthropomorphic<br>
+ 			<input type="radio" name="p5" value="Antropomorfas - Geometricas/Formas libres">Anthropomorphic or Geometric/free figures<br>
+  			<input type="radio" name="p5" value="Geometricas/formas libres o Zoomorfas">Zoomorphic or Geometric/free figures<br>
+  			<input type="radio" name="p5" value="Geomorfas o Geometricas/formas libres">Geomorphic or Geometric/free figures<br>
+  			<input type="radio" name="p5" value="Geomorfas o Zoomorfas">Geomorphic or Zoomorphic<br>
+  			<input type="radio" name="p5" value="Geomorfas o Antropomorfas">Geomorphic or Anthropomorphic
   			</p>
 		</form>`;
 		pregunta = 6;
@@ -330,9 +304,9 @@ whole body, head, hands and feet prints…-</b><br>
   			</p>
 		</form>`;
 		pregunta = 7;
-		}else{
+		}else if(pregunta==7){
 			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
-    	<img onclick="submit7();submitForm()" style="position:absolute; height:6vh;bottom:11vh; right: 24vw;" src="end.png">
+    	<img onclick="submit7();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
     	<form style="position:absolute; top:210px;left:37%">
     	    <p style="width:15em;">
     		<b>Combination of anthropomorphic and Zoomorphic shapes
@@ -344,6 +318,31 @@ generates ___________________ representations</b><br>
   			<input type="radio" name="p7" value="Zooantropogeometricas">Zooanthropomorphic
   			</p>
 		</form>`;
+
+		pregunta = 8;
+		}else{
+			var mes = `
+		<img onclick="loadPetro1head();" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right.png" >
+	<img onclick="loadPetro1head2();" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left.png" >
+	<img onclick="loadPetro1cuerpo();" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right.png" >
+	<img onclick="loadPetro1cuerpo2();" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left.png" >
+	<img onclick="loadPetro1inferior();" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right.png" >
+	<img onclick="loadPetro1inferior2();" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left.png" >`;
+		document.getElementById("hands").innerHTML = mes;
+			loadPetro1head();
+		loadPetro1cuerpo();
+		loadPetro1inferior();
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:204px;width:48vw;left:26vw;height:7vh;" src="cuadro2.png">
+    	<img onclick="submit8();submitForm()" style="position:absolute; height:6vh;bottom:11vh; right: 24vw;" src="end.png">
+    	<form style="position:absolute; top:187px;left:28%">
+    	    <p style="width:30em;height:8vh;line-height:20px;">
+    		<b style="">Make several shapes combining parts at random, and identify them writing the name of the
+
+shape</b><br>
+  			
+  			</p>
+		</form>
+		<input style="position:absolute;bottom:8vh;left: 40%" type="text" name="p8" value="Name" checked>`;
 
 		pregunta = 1;
 		}
@@ -407,13 +406,15 @@ generates ___________________ representations</b><br>
 		}else if (pregunta==5) {
 			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
     	<img onclick="submit5();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
-    	<form style="position:absolute; top:210px;left:37%">
-    	    <p style="width:15em;">
-    		<b>Las representaciones de imagenes mas abstractas las llamamos ____________</b><br>
-  			<input type="radio" name="p5" value="Zoomorfas" checked>Zoomorfas<br>
- 			<input type="radio" name="p5" value="Antropomorfas">Antropomorfas<br>
-  			<input type="radio" name="p5" value="Geometricas o formas libres">Geometricas o formas libres<br>
-  			<input type="radio" name="p5" value="Geomorfas">Geomorfas
+    	<form style="position:absolute; top:210px;left:33%">
+    	    <p style="width:22em;">
+    		<b>Las representaciones de imagenes mas abstractas las llamamos ____________ o ____________</b><br>
+  			<input type="radio" name="p5" value="Zoomorfas - Antropomorfas" checked>Zoomorfas or Antropomorfas<br>
+ 			<input type="radio" name="p5" value="Antropomorfas - Geometricas/Formas libres">Antropomorfas or Geometricas/formas libres<br>
+  			<input type="radio" name="p5" value="Geometricas/formas libres o Zoomorfas">Zoomorfas or Geometricas/formas libres<br>
+  			<input type="radio" name="p5" value="Geomorfas o Geometricas/formas libres">Geomorfas or Geometricas/formas libres<br>
+  			<input type="radio" name="p5" value="Geomorfas o Zoomorfas">Geomorfas or Zoomorfas<br>
+  			<input type="radio" name="p5" value="Geomorfas o Antropomorfas">Geomorfas or Antropomorfas
   			</p>
 		</form>`;
 		pregunta = 6;
@@ -430,9 +431,9 @@ generates ___________________ representations</b><br>
   			</p>
 		</form>`;
 		pregunta = 7;
-		}else{
+		}else if(pregunta==7){
 			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:220px;width:35vw;left:30vw;height:25vw;" src="cuadro2.png">
-    	<img onclick="submit7();submitForm()" style="position:absolute; height:6vh;bottom:11vh; right: 24vw;" src="fin.png">
+    	<img onclick="submit7();nextPreg()" style="position:absolute; height:10vh;bottom:12vh; right: 25vw;" onmouseover="this.src='derblue.png'" onmouseout="this.src='derecha.png'" src="derecha.png">
     	<form style="position:absolute; top:210px;left:37%">
     	    <p style="width:15em;">
     		<b>La mezcla de figuras Antropomorfas + Zoomorfas genera representaciones _________________</b><br>
@@ -442,6 +443,29 @@ generates ___________________ representations</b><br>
   			<input type="radio" name="p7" value="Zooantropogeometricas">Zooantropogeometricas
   			</p>
 		</form>`;
+
+		pregunta = 8;
+		}else{
+			var mes = `
+		<img onclick="loadPetro1head();" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right.png" >
+	<img onclick="loadPetro1head2();" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left.png" >
+	<img onclick="loadPetro1cuerpo();" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right.png" >
+	<img onclick="loadPetro1cuerpo2();" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left.png" >
+	<img onclick="loadPetro1inferior();" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right.png" >
+	<img onclick="loadPetro1inferior2();" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left.png" >`;
+		document.getElementById("hands").innerHTML = mes;
+			loadPetro1head();
+		loadPetro1cuerpo();
+		loadPetro1inferior();
+			document.getElementById("rec").innerHTML = `<img style="position:absolute; top:204px;width:48vw;left:26vw;height:7vh;" src="cuadro2.png">
+    	<img onclick="submit8();submitForm()" style="position:absolute; height:6vh;bottom:11vh; right: 24vw;" src="end.png">
+    	<form style="position:absolute; top:187px;left:28%">
+    	    <p style="width:30em;height: 8vh;line-height:20px;">
+    		<b style="">Realizar diversas figuras mezclando partes aleatoriamente, e identificarlas escribiendo el nombre de la figura realizada</b><br>
+  			
+  			</p>
+		</form>
+		<input style="position:absolute;bottom:8vh;left: 40%" type="text" name="p8" value="Nombre" checked>`;
 
 		pregunta = 1;
 		}
@@ -475,6 +499,10 @@ generates ___________________ representations</b><br>
     	var res = document.querySelector('input[name="p7"]:checked').value;
     	r7 = res;
     }
+    function submit8(){
+    	var res = document.querySelector('input[name="p8"]').value;
+    	r8 = res;
+    }
 
     function submitForm(){
     	window.location.href = "mailto:ricardolira48@hotmail.com?Subject=Respuestas Rupestrarium&body="
@@ -484,7 +512,12 @@ generates ___________________ representations</b><br>
     	+"%0D%0A%0D%0A4-Se llaman ____________ las representaciones del Ser humano-cuerpo entero, la cabeza, huellas de manos y pies:%0D%0A  "+r4
     	+"%0D%0A%0D%0A5-Las representaciones de imagenes mas abstractas las llamamos:%0D%0A  "+r5
     	+"%0D%0A%0D%0A6-Las figuras Zoomorfas son representaciones de:%0D%0A  "+r6
-    	+"%0D%0A%0D%0A7-La mezcla de figuras Antropomorfas + Zoomorfas genera representaciones:%0D%0A  "+r7;
+    	+"%0D%0A%0D%0A7-La mezcla de figuras Antropomorfas + Zoomorfas genera representaciones:%0D%0A  "+r7
+    	+"%0D%0A%0D%0A8-Realizar diversas figuras mezclando partes aleatoriamente, e identificarlas escribiendo el nombre de la figura realizada.%0D%0A  "
+    	+"Cabeza: "+parts[p1head-1]
+    	+"%0D%0A  Cuerpo: "+parts[p1cuerpo-1]
+    	+"%0D%0A  Inferior: "+parts[p1inf-1]
+    	+"%0D%0A    Respuesta:  "+r8;
     }
 
 	function loadImage(num){
@@ -786,42 +819,42 @@ representaciones Zoogeoantropomorfas.</p>
 	}
 	function loadHands1(){
 		var mes = `
-		<img onclick="loadPetro1head();getDescription('white')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right.png" >
-	<img onclick="loadPetro1head2();getDescription('white')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left.png" >
-	<img onclick="loadPetro1cuerpo();getDescription('white')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right.png" >
-	<img onclick="loadPetro1cuerpo2();getDescription('white')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left.png" >
-	<img onclick="loadPetro1inferior();getDescription('white')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right.png" >
-	<img onclick="loadPetro1inferior2();getDescription('white')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left.png" >`;
+		<img onclick="loadPetro1head();getDescription('white')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right.png" >
+	<img onclick="loadPetro1head2();getDescription('white')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left.png" >
+	<img onclick="loadPetro1cuerpo();getDescription('white')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right.png" >
+	<img onclick="loadPetro1cuerpo2();getDescription('white')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left.png" >
+	<img onclick="loadPetro1inferior();getDescription('white')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right.png" >
+	<img onclick="loadPetro1inferior2();getDescription('white')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left.png" >`;
 		document.getElementById("hands").innerHTML = mes;
 	}
 	function loadHands2(){
 		var mes = `
-		<img onclick="loadPetro2head();getDescription('white')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right.png" >
-	<img onclick="loadPetro2head2();getDescription('white')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left.png" >
-	<img onclick="loadPetro2cuerpo();getDescription('white')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right.png" >
-	<img onclick="loadPetro2cuerpo2();getDescription('white')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left.png" >
-	<img onclick="loadPetro2inferior();getDescription('white')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right.png" >
-	<img onclick="loadPetro2inferior2();getDescription('white')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left.png" >`;
+		<img onclick="loadPetro2head();getDescription('white')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right.png" >
+	<img onclick="loadPetro2head2();getDescription('white')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left.png" >
+	<img onclick="loadPetro2cuerpo();getDescription('white')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right.png" >
+	<img onclick="loadPetro2cuerpo2();getDescription('white')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left.png" >
+	<img onclick="loadPetro2inferior();getDescription('white')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right.png" >
+	<img onclick="loadPetro2inferior2();getDescription('white')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left.png" >`;
 		document.getElementById("hands").innerHTML = mes;
 	}
 	function loadHands3(){
 		var mes = `
-		<img onclick="loadPint1head();getDescription('black')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right_pint.png" >
-	<img onclick="loadPint1head2();getDescription('black')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left_pint.png" >
-	<img onclick="loadPint1cuerpo();getDescription('black')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right_pint.png" >
-	<img onclick="loadPint1cuerpo2();getDescription('black')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left_pint.png" >
-	<img onclick="loadPint1inferior();getDescription('black')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right_pint.png" >
-	<img onclick="loadPint1inferior2();getDescription('black')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left_pint.png" >`;
+		<img onclick="loadPint1head();getDescription('black')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right_pint.png" >
+	<img onclick="loadPint1head2();getDescription('black')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left_pint.png" >
+	<img onclick="loadPint1cuerpo();getDescription('black')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right_pint.png" >
+	<img onclick="loadPint1cuerpo2();getDescription('black')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left_pint.png" >
+	<img onclick="loadPint1inferior();getDescription('black')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right_pint.png" >
+	<img onclick="loadPint1inferior2();getDescription('black')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left_pint.png" >`;
 		document.getElementById("hands").innerHTML = mes;
 	}
 	function loadHands4(){
 		var mes = `
-		<img onclick="loadPint2head();getDescription('black')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right_pint.png" >
-	<img onclick="loadPint2head2();getDescription('black')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left_pint.png" >
-	<img onclick="loadPint2cuerpo();getDescription('black')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right_pint.png" >
-	<img onclick="loadPint2cuerpo2();getDescription('black')" onmouseover="this.src='arrow_left.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left_pint.png" >
-	<img onclick="loadPint2inferior();getDescription('black')" onmouseover="this.src='arrow_right.png'" onmouseout="this.src='arrow_right_pint.png'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right_pint.png" >
-	<img onclick="loadPint2inferior2();getDescription('black')" onmouseover="this.src='arrow_left_pint_blur.png'" onmouseout="this.src='arrow_left_pint.png'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left_pint.png" >`;
+		<img onclick="loadPint2head();getDescription('black')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 15vh);" src="arrow_right_pint.png" >
+	<img onclick="loadPint2head2();getDescription('black')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 15vh);" src="arrow_left_pint.png" >
+	<img onclick="loadPint2cuerpo();getDescription('black')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 31vh);" src="arrow_right_pint.png" >
+	<img onclick="loadPint2cuerpo2();getDescription('black')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 31vh);" src="arrow_left_pint.png" >
+	<img onclick="loadPint2inferior();getDescription('black')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; right: 27%;top: calc(200px + 46vh);" src="arrow_right_pint.png" >
+	<img onclick="loadPint2inferior2();getDescription('black')" onmouseover="this.style.height='2.5vh'" onmouseout="this.style.height='2vh'" style="position: absolute;height: 2vh; left: 27%;top: calc(200px + 46vh);" src="arrow_left_pint.png" >`;
 		document.getElementById("hands").innerHTML = mes;
 	}
 	function loadPetro1head(){
